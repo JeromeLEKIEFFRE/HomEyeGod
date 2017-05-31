@@ -1,6 +1,7 @@
 <?php
     require ('../Modele/connexion_db.php');
-    require ('DonneeCapt.php')
+    require ('../Modele/DonneeCapt.php')
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -45,7 +46,7 @@
 
         <div class="showgeneral">
             <h3>Informations capteurs général </h3>
-                <p>Température moyenne : XXX° <!--variable à mettre--></p>
+                <p>Température moyenne :</p>
                 <p>Humidité moyenne : XXX% <!--variable à mettre--></p>
                 <p>Fenêtres ouvertes : X <!--variable à mettre--></p>
                 <p>Chauffages allumés : X <!--variable à mettre--></p>
@@ -82,3 +83,28 @@
 
 </body>
 </html>
+
+
+<?php
+$reponse = $bdd->query('SELECT * FROM voiture');
+?>
+
+<table>
+    <tr>
+        <th>immatriculation</th>
+
+    </tr>
+    <?php
+    while($donnees = mysql_fetch_array($reponse))
+    {
+        ?>
+        <tr>
+            <td><?php echo $donnees['immat'];?></td>
+
+
+        </tr>
+        <?php
+    }
+
+    ?>
+</table>

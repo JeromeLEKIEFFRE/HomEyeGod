@@ -16,3 +16,5 @@ function readDonnee($db,$Datas){
 function searchDonnee($db,$charData){
     
 }
+
+function tempmoy($db,$idMaison){
