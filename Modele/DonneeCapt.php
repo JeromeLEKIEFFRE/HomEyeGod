@@ -13,8 +13,6 @@ function readDonnee($db,$Datas){
     return $reponse;
 }
 
-function searchDonnee($db,$charData){
-    
-}
-
 function tempmoy($db,$idMaison){
+    $sql='select ' Données
+}
