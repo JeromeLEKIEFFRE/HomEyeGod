@@ -77,31 +77,21 @@
 
 
 
-
-
-
-
 </body>
 </html>
 
 
 <?php
-$reponse = $bdd->query('SELECT * FROM voiture');
+$db='HomEyeGod';
 ?>
 
 <table>
-    <tr>
-        <th>immatriculation</th>
-
-    </tr>
     <?php
-    while($donnees = mysql_fetch_array($reponse))
+    foreach($db->query('SELECT * FROM voiture') as $row)
     {
         ?>
         <tr>
-            <td><?php echo $donnees['immat'];?></td>
-
-
+            <td><?php echo $row['immat'];?></td>
         </tr>
         <?php
     }
