@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../CSS/style.css" />
-    <script type="text/javascript" src="accueil_admin.js"></script>
     <title>Page Administrateur</title>
 </head>
 
@@ -38,7 +37,7 @@
     <section class="rectangle_flex_modif">
         <div class="list_page">
             <ul>
-                <li>ui
+                <li name="ui">ui
                     <ul>
                         <li>ko</li>
                         <li>jo</li>
@@ -49,10 +48,6 @@
         <div class="page_code">
             <form class="store_text">
                <textarea id="html_code">
-                <?php
-                    include('Recup.php');
-                    recup_text();
-                ?>
                    <input type="submit">
                 </textarea>
 
@@ -62,11 +57,17 @@
     </section>
 
     <section class="rectangle_flex_consult">
+        <div class="print_users">
+            <?php
+            include("recup.php");
+            echo recup_name();
+            ?>
 
+        </div>
     </section>
 </section>
 
 
-
+<script type="text/javascript" src="accueil_admin.js"></script>
 </body>
 </html>
