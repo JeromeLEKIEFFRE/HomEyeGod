@@ -1,0 +1,33 @@
+*
+section
+{
+    display: flex;
+    justify-content: center;
+}
+h1
+{
+    color: #4c74a1;
+    justify-content: center;
+    font-size: 2.5em;
+}
+p
+{
+    color: #4c74a1;
+}
+.titre_page
+{
+    display: flex;
+    justify-content: center;
+}
+label
+{
+    display: block;
+    width: 300px;
+    float: left;
+    color: #4c74a1;
+
+}
+label, input
+{
+    margin-bottom:20px;
+}
