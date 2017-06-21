@@ -7,6 +7,10 @@
 </head>
 
 <body>
+    <?php
+    include("../../Modele/recup.php");
+    include("../../Modele/connexion.php");
+    ?>
 <header>
     <h1>
         <a href="home_page.html"><img src="../BANK/logo-accueilDiv2.png" height="15%" width="15%" alt="retour vers l'accueil" /></a>
@@ -58,12 +62,16 @@
 
     <section class="rectangle_flex_consult">
         <div class="print_users">
-            <?php
-            include("recup.php");
-            echo recup_name();
-            ?>
-
+            <ul class="print_users" name="list">
+                <?php echo recup_name($db)?>
+            </ul>
         </div>
+        <div class="print_users" name="liste2">
+            <ul class="print_users">
+                <?php echo recup_all_broken_capt($db)?>
+            </ul>
+        </div>
+
     </section>
 </section>
 
