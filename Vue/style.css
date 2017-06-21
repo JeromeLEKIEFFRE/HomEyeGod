@@ -26,7 +26,7 @@ h2
 	font-size: 2em;
 }
 
-form
+#form_inscription
 {
 	line-height:40px;
 	margin-left: 70px;
@@ -228,4 +228,8 @@ aside
 	width: 10em;
   	padding: 1.2em;
   	font-weight: bold;
+}
+/* css gestion compte*/
+.gestion_c {
+	display: flex;
 }
