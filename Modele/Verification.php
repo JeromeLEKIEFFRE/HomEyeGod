@@ -33,4 +33,20 @@ function getMail($db,$idUtilisateur){
     return $reponse;
 }
 
+function test_connect($db,$user_name,$mdp){
+    $r= $db->query('SELECT Mdp FROM utilisateurs WHERE NomUtilisateur = "'.$user_name.'"');
+    if($mdp == $r['Mdp']){
+        return true;
+    }
+    return false;
+}
+
+function get_name ($db,$username){
+    $r= $db->query('SELECT Nom FROM utilisateurs WHERE idUtilisateur="'.$username.'"');
+    return $r['Nom'];
+}
+function get_first_name ($db,$username){
+    $r= $db->query('SELECT Prenom FROM utilisateurs WHERE idUtilisateur="'.$username.'"');
+    return $r['Prenom'];
+}
 ?>

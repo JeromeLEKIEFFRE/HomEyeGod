@@ -17,7 +17,7 @@
 
 <section class="connexion_accueil" id="cadre_connexion">
 
-    <form action="../Controleur/Formulaire.php" method="post">
+    <form action="../Controleur/Formulaire_inscription.php" method="post">
         <label for="Nom d'utilisateur"> Nom d'utilisateur:</label><input type="text" name="Nom_utilisateur" /><br/>
         <label for="Mot de passe"> Mot de passe:</label><input type="password" name="Mot_de_passe" /><br/>
         <label for="valider"></label><input type="submit" name="valider" />
