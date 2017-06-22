@@ -229,3 +229,92 @@ aside
   	padding: 1.2em;
   	font-weight: bold;
 }
+.modif_admin{
+	background-color: #7192bb;
+	width : 50%;
+	height : 100%;
+	margin: 0;
+	transition: width 1000ms , visibility 500ms;
+}
+
+.consult_admin{
+	background-color: #406694;
+	width : 50%;
+	height : 100%;
+	margin: 0;
+	transition: width 1000ms , visibility 1000ms;
+}
+
+.consult_admin p{
+	visibility : visible;
+}
+
+.rectangle_flex_acc {
+	display: flex;
+	justify-content: space-around;
+	height: 500px;
+	width : 100%;
+	margin:0;
+	transition: width 1000ms , visibility 1000ms;
+}
+
+.rectangle_flex_consult{
+	display: none;
+	justify-content: space-around;
+	margin: 0;
+	padding: 0;
+	height:100%;
+	width:100%;
+	transition: width 500ms, visibility 500ms;
+
+}
+.rectangle_flex_modif{
+	display: none;
+	justify-content: space-around;
+	height: 100%;
+	margin:0;
+	padding:0;
+	width : 100%;
+	transition: width 500ms , visibility 500ms;
+
+}
+.rectangle_flex_encadre{
+	display: flex;
+	justify-content: space-around;
+	height: 500px;
+	margin:0;
+	padding: 0;
+	width:100%;
+}
+
+.list_page{
+	background-color: #406694;
+	display: flex;
+	height: 100%;
+	width: 15%;
+}
+.page_code{
+	display: flex;
+	height:100%;
+	width: 85%;
+}
+
+#html_code {
+	display: flex;
+	margin: auto;
+	height:80%;
+	width:80%;
+	background-color: #dee7ff;
+	color: white;
+	font-size: 20px;
+
+}
+.store_text {
+	display: flex;
+	height:100%;
+	width:100%;
+}
+.store_text input{
+	height:10%;
+	width: 20%;
+}
