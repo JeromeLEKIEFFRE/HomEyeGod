@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../Vue%20propre/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Créer un compte</title>
 </head>
 
 <body>
 <header>
-    <h1><a href="home_page.html"><img src="Images/logo_HEG.png" alt="logo HomEyeGod" /></a></h1>
+    <h1><a href="home_page.html"><img src="Images/logo_HEG.png" alt="logo GerHome" /></a></h1>
 </header>
 
 <nav>
@@ -24,7 +24,7 @@
 <h2>Créez votre compte HomEyeGod</h2>
 <section class="section_inscription">
     <div><!-- on rentre les informations dans des cases -->
-        <form action="Formulaire.php" method="post">
+        <form id="form_inscription" action="Formulaire.php" method="post">
             <label for="Nom">Nom:</label><input type="text" name="Nom"/><br/>
             <label for="Prénom"> Prénom:</label><input type="text" name="Prénom"/><br/>
             <label for="Sexe"> Sexe:</label><input type="radio" name="Sexe" value="homme"/>homme
@@ -38,7 +38,7 @@
             <label for="email"> email:</label><input type="email" name="email"/><br/>
             <label for="Numéro de téléphone"> Numéro de téléphone:</label><input type="tel" name="Numéro de téléphone"/><br/>
             <label for="Numéro de téléphone fixe"> Numéro de téléphone fixe:</label><input type="tel" name="Numéro de téléphone fixe"/><br/>
-            <label for="valider"></label><input type="submit" name="valider" id="boutton_submit" />
+            <label for="valider"></label><input type="submit" name="valider" id="boutton_submit"/>
 
         </form>
 
@@ -53,3 +53,11 @@
 
 </body>
 </html>
+
+<?php
+/**
+ * Created by PhpStorm.
+ * User: eliot
+ * Date: 19/06/2017
+ * Time: 10:17
+ */
