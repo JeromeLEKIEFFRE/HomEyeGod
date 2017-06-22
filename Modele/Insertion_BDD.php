@@ -6,8 +6,15 @@ $requ->execute();*/
 
 function insertNewUser($db,$username,$mdp,$nom,$prenom,$idMaison,$numero,$mobile){
     // Créer un nouvel utilisateur /!\ à faire après avoir crée la maison avec les input de la demande d'adresse qui sera celui de la maison 'principale'
-    $sql ='INSERT INTO adresse VALUES (0,"'.$nom.'","'.$prenom.'","'.$idMaison.'","'.$numero.'","'.$mobile.'","'.$username.'","'.$mdp.'")';
+    $sql ='INSERT INTO Utilisateur ()VALUES (1,"'.$nom.'","'.$prenom.'","'.$idMaison.'","'.$numero.'","'.$mobile.'","'.$username.'","'.$mdp.'")';
     $db->exec($sql);
+}
+INSERT INTO `utilisateurs` (`idUtilisateur`, `Rôles`, `Nom`, `Prénom`, `idAdressePrincipale`, `Numero`, `Mobile`, `Mail`, `NomUtilisateur`, `Mdp`)
+        VALUES (NULL,1,"'.$nom.'","'.$prenom.'","'.$idMaison.'","'.$numero.'","'.$mobile.'", "'.$username.'", "'.password_hash("$password",PASSWORD_BCRYPT).'");
+function add_user($db,$login,$password){
+    //ajout user crypté
+    $requ=$db->prepare('INSERT INTO Utilisateur (NomUtilisateur,Mdp) VALUES ("'.$login.'","'.password_hash("$password",PASSWORD_BCRYPT).'")');
+    $requ->execute();
 }
 
 function newIdUtilisateur($db){
@@ -31,3 +38,8 @@ function idHome($db,$idUtilisateur){
     return $reponse;
 }
 ?>
+function add_user($db,$login,$password){
+
+$requ=$db->prepare('INSERT INTO Utilisateur (NomUtilisateur,Mdp) VALUES ("'.$login.'","'.password_hash("$password",PASSWORD_BCRYPT).'")');
+$requ->execute();
+}
