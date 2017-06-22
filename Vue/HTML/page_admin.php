@@ -40,19 +40,12 @@
 
     <section class="rectangle_flex_modif">
         <div class="list_page">
-            <ul>
-                <li name="ui">ui
-                    <ul>
-                        <li>ko</li>
-                        <li>jo</li>
-                    </ul>
-                </li>
-            </ul>
+                <?php echo recup_page_name($db)?>
         </div>
         <div class="page_code">
             <form class="store_text">
                <textarea id="html_code">
-                   <input type="submit">
+
                 </textarea>
 
             </form>
@@ -66,7 +59,7 @@
                 <?php echo recup_name($db)?>
             </ul>
         </div>
-        <div class="print_users" name="liste2">
+        <div class="print_users" name="list2">
             <ul class="print_users">
                 <?php echo recup_all_broken_capt($db)?>
             </ul>

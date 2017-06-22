@@ -22,10 +22,17 @@ function recup_name($db){
 }
 // MODIFICATION ADMIN
 function recup_page_name($db){
-    $r=$db->query('SELECT name_text FROM page');
-    $option="";
-    foreach ($r as $name)
-        $option .= "<li>" . $name['name_text'] . "</li>";
+    $option="<ul>";
+    $t=$db->query('SELECT DISTINCT name_page FROM page');
+    foreach ($t as $page) {
+        $option .= "<li>" . $page['name_page'] . "</li> <ul>";
+        $r = $db->query('SELECT name_text FROM page WHERE name_page = "' . $page['name_page'] . '"');
+        foreach ($r as $name) {
+            $option .= "<li onclick=''>" . $name['name_text'] . "</li>";
+        }
+        $option .= "</ul>";
+    }
+    $option .= "</ul>";
     return $option;
 }
 function recup_content($db,$text_choosen){

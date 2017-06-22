@@ -31,6 +31,11 @@ function modifLongueur(page) {
 
 
 }
+
+function fill_text_area(text_name){
+    var cont = document.getElementsByName(text_name);
+
+}
 // fonction pour ajouter un écouteur à t
 /*function load() {
     var el = document.getElementsByClassName("modif_admin");
