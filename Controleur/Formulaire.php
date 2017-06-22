@@ -3,26 +3,41 @@
 include ("../Modele/Verification.php");
 include ("../Modele/connexion_db.php");
 include ("../Modele/Insertion_BDD.php");
-$email = "test@exemple.com";
-if ($_POST["valider"]
-    AND $_POST["Nom"]!=NULL
-    AND $_POST["Prenom"]!=NULL
-    AND $_POST["Nom_utilisateur"]!=NULL
-    AND idUtilisateur($db, $_POST["Nom_utilisateur"])->rowcount() ==NULL
-    AND $_POST["Mot_de_passe"]!=NULL
-    AND $_POST["Confirmation_mot_de_passe"]!=NULL
-    AND $_POST["Mot_de_passe"]==$_POST["Confirmation_mot_de_passe"]
-    AND $_POST["Adresse"]!=NULL
-    AND $_POST["Code_Postal"]!=NULL
-    AND $_POST["Ville"]!=NULL
-    AND $_POST["Email"]!= NULL
-    AND filter_var($email, FILTER_VALIDATE_EMAIL)
-    AND idMail($db, $_POST["Email"])->rowcount()==NULL
-    AND $_POST["Numero_de_telephone"]!=NULL ){
-    newIdUtilisateur($db);
+
+//email="test@exemple.com";
+//affectation des données du formulaires en variables php
+
+$nom=            $_POST["nom"];
+$prenom=         $_POST["prenom"];
+$username=       $_POST["username"];
+$mdp=password_hash("$_POST[mdp]",PASSWORD_BCRYPT);
+$confirm_mdp=password_hash("$_POST[confirm_mdp]",PASSWORD_BCRYPT);
+$adresse=        $_POST["adresse"];
+$code_postal=    $_POST["code_postal"];
+$ville=          $_POST["ville"];
+$email=          $_POST["email"];
+$numero_tel=     $_POST["numero_tel"];
+$numero_tel_fixe=$_POST["numero_tel_fixe"];
+
+if ($_POST["valider"] //vérification des champs
+    AND $nom !=NULL
+    AND $prenom !=NULL
+    AND $username !=NULL
+    AND idUtilisateur($db, $username)->rowcount() ==NULL //vérification présence dans la bdd
+    AND $mdp !=NULL
+    AND $confirm_mdp !=NULL
+    AND $mdp==$confirm_mdp //vérification même mdp
+    AND $adresse!=NULL
+    AND $code_postal !=NULL
+    AND $ville !=NULL
+    AND $email != NULL
+    AND filter_var($email, FILTER_VALIDATE_EMAIL) //email valide?
+    AND idMail($db, $email)->rowcount()==NULL //vérification présence du mail dans bdd
+    AND $_POST["numero_tel"]!=NULL ){
+    //newIdUtilisateur($db);
     //newHome($db, idUtilisateur($db,$_POST["Nom_utilisateur"]),$_POST["Ville"], NULL, $_POST["Numero_de_telephone"], NULL, NULL, $_POST["Code_Postal"]);
-    insertNewUser($db, $_POST["Nom_utilisateur"], $_POST["Mot_de_passe"], NULL, NULL, NULL, $_POST["Numero_de_telephone"], NULL);
-    header('Location: ../HTML/compte_cree.html');
+    //insertNewUser($db, $_POST["Nom_utilisateur"], $_POST["Mot_de_passe"], NULL, NULL, NULL, $_POST["Numero_de_telephone"], NULL);
+    //header('Location: ../HTML/compte_cree.html');
     exit;
 }
 
