@@ -5,6 +5,7 @@
 </head>
 
 <?php
+
 $dbname = 'homeyegod';
 $host='localhost';
 $user='root';
@@ -16,13 +17,7 @@ catch (Exception $e)
 {
     die('Erreur : ' . $e->getMessage());
 }
-$infoU1 = $bdd->query('SELECT * FROM utilisateurs WHERE idUtilisateur = 1');
-$infoU=$infoU1 -> fetch();
-$infoM1 = $bdd->query('SELECT * FROM maisons WHERE idUtilisateur = 1');
-$infoM=$infoM1 -> fetch();
-$p=$infoM['TypeVoie'];
-$infoV1 = $bdd->query('SELECT TypeName FROM typevoie WHERE TypeValue = "'.$p.'"');
-$infoV=$infoV1 -> fetch();
+include ("../Modele/fonction_gestion_compte.php");
 ?>
     <body>
         <header>
@@ -56,24 +51,24 @@ $infoV=$infoV1 -> fetch();
             </aside>
         	<aside>
                 <p> homme<br/>
-                    <?php echo $infoU['Nom']?><br/>
-                    <?php echo $infoU['Prenom']?><br/>
-                    <?php echo $infoU['NomUtilisateur']?><br/>
-                    <?php echo $infoM['numero_voie'],' ',$infoV['TypeName'],' ',$infoM['Voie'] ?><br/>
-                    <?php echo $infoM['code_postal']?><br/>
-                    <?php echo $infoM['Ville']?><br/>
-                    <?php echo $infoU['Mail']?><br/>
-                    <?php echo $infoU['Mobile']?><br/>
-                    <?php echo $infoU['Numero']?><br/>
+                    <?php echo infoU($db,1)['Nom']?><br/>
+                    <?php echo infoU($db,1)['Prenom']?><br/>
+                    <?php echo infoU($db,1)['NomUtilisateur']?><br/>
+                    <?php echo infoM($db,1)['code_postal']?><br/>
+                    <?php echo infoM($db,1)['Ville']?><br/>
+                    <?php echo infoM($db,1)['numero_voie'],' ',infoV($db,1)['TypeName'],' ',infoM($db,1)['Voie'] ?><br/>
+                    <?php echo infoU($db,1)['Mail']?><br/>
+                    <?php echo infoU($db,1)['Mobile']?><br/>
+                    <?php echo infoU($db,1)['Numero']?><br/>
                 </p>
         	</aside>
             </div>
-            <?php
+            <?php/*
             $Type1 = $bdd->query('SELECT * FROM typevoie');
             $Type = $Type1 -> fetchAll();
             ?>
         	<h1>Changer données personnelles</h1>
-                <form action="../Modele/Formulaire_update.php" method="post">
+                <form action="../Modele/fonction_gestion_compte.php" method="post">
         		<label for="Nom d'utilisateur"> Nom d'utilisateur:</label><input type="text" name="Nom_utilisateur" /><br/>
 				<label for="Mot de passe"> Mot de passe:</label><input type="password" name="Mot_de_passe" /><br/>
                 <label for="Confirmer le mot de passe"> Confimer le mot de passe:</label><input type="password"  name="confirmer"/> <br/>
@@ -93,7 +88,7 @@ $infoV=$infoV1 -> fetch();
 
             <h1>Saisie du mot de passe actuel pour confirmé</h1>
 				<label for="valider"></label><input type="submit" name="valider" />
-                </form>
+                </form>*/?>
             <aside>
             </aside>
             <article>                
