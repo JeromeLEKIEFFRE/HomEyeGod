@@ -39,15 +39,15 @@ include ("../Modele/fonction_gestion_compte.php");
             <div class="gestion_c">
             <aside>
         		<p>Sexe <?php ?><br/>
-        		Nom<br/>
-        		Prénom  <br/>
-        		Nom d'utilisateur<br/>
-        		Code postal<br/>
-        		Ville<br/>
-        		adresse<br/>
-        		email<br/>
-        		Numéro de téléphone<br/>
-                Numéro de téléphone Fixe</p>
+        		Nom:<br/>
+        		Prénom:  <br/>
+        		Nom d'utilisateur:<br/>
+        		Code postal:<br/>
+        		Ville:<br/>
+        		adresse:<br/>
+        		email:<br/>
+        		Numéro de téléphone:<br/>
+                Numéro de téléphone Fixe:    </p>
             </aside>
         	<aside>
                 <p> homme<br/>
@@ -56,19 +56,19 @@ include ("../Modele/fonction_gestion_compte.php");
                     <?php echo infoU($db,1)['NomUtilisateur']?><br/>
                     <?php echo infoM($db,1)['code_postal']?><br/>
                     <?php echo infoM($db,1)['Ville']?><br/>
-                    <?php echo infoM($db,1)['numero_voie'],' ',infoV($db,1)['TypeName'],' ',infoM($db,1)['Voie'] ?><br/>
+                    <?php// echo infoM($db,1)['numero_voie'],' ',infoV($db,1)['TypeName'],' ',infoM($db,1)['Voie'] ?><br/>
                     <?php echo infoU($db,1)['Mail']?><br/>
                     <?php echo infoU($db,1)['Mobile']?><br/>
                     <?php echo infoU($db,1)['Numero']?><br/>
                 </p>
         	</aside>
             </div>
-            <?php/*
+            <?php
             $Type1 = $bdd->query('SELECT * FROM typevoie');
             $Type = $Type1 -> fetchAll();
             ?>
         	<h1>Changer données personnelles</h1>
-                <form action="../Modele/fonction_gestion_compte.php" method="post">
+                <form action="../Controleur/controleur_gestion.php" method="post">
         		<label for="Nom d'utilisateur"> Nom d'utilisateur:</label><input type="text" name="Nom_utilisateur" /><br/>
 				<label for="Mot de passe"> Mot de passe:</label><input type="password" name="Mot_de_passe" /><br/>
                 <label for="Confirmer le mot de passe"> Confimer le mot de passe:</label><input type="password"  name="confirmer"/> <br/>
@@ -87,8 +87,9 @@ include ("../Modele/fonction_gestion_compte.php");
                 <label for="Numéro de téléphone fixe"> Numéro de téléphone fixe:</label><input type="tel" name="fixe"/><br/>
 
             <h1>Saisie du mot de passe actuel pour confirmé</h1>
+                    <label for="Mot de passe actuel"> Mot de passe actuel:</label><input type="password" name="Mot_de_passe_actuel" /><br/>
 				<label for="valider"></label><input type="submit" name="valider" />
-                </form>*/?>
+                </form>?>
             <aside>
             </aside>
             <article>                
