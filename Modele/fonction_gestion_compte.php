@@ -6,6 +6,10 @@ function idMail($db,$userMail){
     $sql = 'SELECT idUtilisateur FROM utilisateurs WHERE Mail = "'.$userMail.'"';
     $reponse = $db->query($sql);
     return $reponse;}
+function nom_utilisateur($db,$NomUtilisateur){
+    $sql = 'SELECT idUtilisateur FROM utilisateurs WHERE NomUtilisateur = "'.$NomUtilisateur.'"';
+    $reponse = $db->query($sql);
+    return $reponse;}
 
 function infoU($db,$ID){
     $sql = 'SELECT * FROM utilisateurs WHERE idUtilisateur = "'.$ID.'"';

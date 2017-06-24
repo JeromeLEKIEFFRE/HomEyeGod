@@ -2,13 +2,23 @@
 include ("../Modele/fonction_gestion_compte.php");
 if ($_POST["Mot_de_passe_actuel"]== infoU($db,1)['Mdp']) {
     if ($_POST["Nom_utilisateur"] != Null) {
-        $db->exec('UPDATE utilisateurs  SET NomUtilisateur= "' . $_POST ["Nom_utilisateur"] . '" WHERE idUtilisateur = 1');
+        if ($_POST[Nom_utilisateur]==nom_utilisateur($db,$_POST["Nom_utilisateur"]));{
+            $db->exec('UPDATE utilisateurs  SET NomUtilisateur= "'.$_POST ["Nom_utilisateur"].'" WHERE idUtilisateur = 1');
+        }
+        else {
+            echo "Ce nom d'utilisateur est déja utilisée";
+        }
     }
     if ($_POST ["Mot_de_passe"] != Null && $_POST ["Mot_de_passe"] == $_POST ["confirmer"]) {
         $db->exec('UPDATE utilisateurs  SET Mdp= "' . $_POST ["Mot_de_passe"] . '" WHERE idUtilisateur = 1');
     }
-    if ($_POST["email"] != Null && idMail($db, $_POST["email"] == Null)) {
-        $db->exec('UPDATE utilisateurs  SET Mail = "' . $_POST ["email"] . '" WHERE idUtilisateur = 1');
+    if ($_POST["email"] != Null) {
+        if (idMail($db, $_POST["email"] == Null)){
+            $db->exec('UPDATE utilisateurs  SET Mail = "' . $_POST ["email"] . '" WHERE idUtilisateur = 1');
+        }
+        else{
+            echo"Cette adresse mail est deja utilisée";
+        }
     }
     if ($_POST["mobile"] != Null) {
         $db->exec('UPDATE utilisateurs  SET Mobile = "' . $_POST ["mobile"] . '" WHERE idUtilisateur = 1');
@@ -32,4 +42,7 @@ if ($_POST["Mot_de_passe_actuel"]== infoU($db,1)['Mdp']) {
         $db->exec('UPDATE maisons  SET Voie = "' . $_POST ["Voie"] . '" WHERE idUtilisateur = 1');
     }
     header('Location: ../Vue/comfirmation_changement.php');
+}
+else {
+    echo "Le mot de passe que vosuavez rentrer est incorrect";
 }
