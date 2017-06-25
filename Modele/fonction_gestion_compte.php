@@ -24,7 +24,7 @@ function infoM($db,$ID){
     return $reponsef;}
 
 function infoV($db,$ID){
-    $sql = 'SELECT TypeName FROM typevoie JOIN utilisateur ON typevoie.TypeValue=utilisateur.typevoie WHERE idUtilisateur="'.$ID.'"';
+    $sql = 'SELECT TypeName FROM typevoie JOIN maisons ON typevoie.TypeValue=maisons.typevoie WHERE idUtilisateur="'.$ID.'"';
     $reponse = $db->query($sql);
     $reponsef = $reponse -> fetch();
     return $reponsef;}

@@ -56,7 +56,7 @@ include ("../Modele/fonction_gestion_compte.php");
                     <?php echo infoU($db,1)['NomUtilisateur']?><br/>
                     <?php echo infoM($db,1)['code_postal']?><br/>
                     <?php echo infoM($db,1)['Ville']?><br/>
-                    <?php// echo infoM($db,1)['numero_voie'],' ',infoV($db,1)['TypeName'],' ',infoM($db,1)['Voie'] ?><br/>
+                    <?php echo infoM($db,1)['numero_voie'],' ',infoV($db,1)['TypeName'],' ',infoM($db,1)['Voie'] ?><br/>
                     <?php echo infoU($db,1)['Mail']?><br/>
                     <?php echo infoU($db,1)['Mobile']?><br/>
                     <?php echo infoU($db,1)['Numero']?><br/>

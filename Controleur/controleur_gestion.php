@@ -2,7 +2,7 @@
 include ("../Modele/fonction_gestion_compte.php");
 if ($_POST["Mot_de_passe_actuel"]== infoU($db,1)['Mdp']) {
     if ($_POST["Nom_utilisateur"] != Null) {
-        if ($_POST[Nom_utilisateur]==nom_utilisateur($db,$_POST["Nom_utilisateur"]));{
+        if ($_POST[Nom_utilisateur]==nom_utilisateur($db,$_POST["Nom_utilisateur"])){
             $db->exec('UPDATE utilisateurs  SET NomUtilisateur= "'.$_POST ["Nom_utilisateur"].'" WHERE idUtilisateur = 1');
         }
         else {
