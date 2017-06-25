@@ -1,14 +1,16 @@
 <?php
     require ('../Modele/connexion_db.php');
-    require ('../Modele/DonneeCapt.php')
-
+    require ('../Modele/DonneeCapt.php');
+    $idMaison=1;
+    $pieces=listsalles($db,$idMaison);
+    $capteurs=listetypescapteurs($db,1);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <title>Page Administrateur</title>
+    <title>Gestion de ma maison</title>
 </head>
 
 <body>
@@ -32,12 +34,16 @@
             <p>Pièces</p>
             <!-- récupérer les noms de pièces dans la BD puis ouvrir en js un div correspondant aux données -->
             <ul class="listepiece">
-                <li>Général</li>
-                <li>Salon</li>
-                <li>Entrée</li>
-                <li>Chambre de Jimmy</li>
-                <li>Chambre d'Eliott</li>
-                <li>Salle de bain</li>
+                <?php
+                foreach($pieces as $row){?>
+                    <li value=<?= $row['idPiece']?> id=><?=$row['Nom']?></li>
+                <?php
+                }
+                ?>
+
+
+
+
             </ul>
             <div class="ajout_piece">
                 <p>+ Ajouter une pièce</p>
@@ -63,38 +69,17 @@
         <div class="showcapt">
             <p>Capteurs</p>
             <ul class="listecapt">
-                <li>Température</li>
-                <li>Humidité</li>
-                <li>Luminosité</li>
-                <li>Présence</li>
-                <li>Caméras</li>
+                <?php
+                foreach($capteurs as $row){?>
+                    <li value=<?= $row['TypeValue']?>><?=$row['TypeName']?></li>
+                    <?php
+                }
+                ?>
             </ul>
             <div class="ajout_capt">
                 <p>+ Ajouter un capteur</p>
             </div>
         </div>
     </div>
-
-
-
 </body>
 </html>
-
-
-<?php
-$db='HomEyeGod';
-?>
-
-<table>
-    <?php
-    foreach($db->query('SELECT * FROM voiture') as $row)
-    {
-        ?>
-        <tr>
-            <td><?php echo $row['immat'];?></td>
-        </tr>
-        <?php
-    }
-
-    ?>
-</table>

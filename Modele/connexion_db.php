@@ -1,5 +1,5 @@
 <?php
-    $dbname = 'HomEyeGod';
+    $dbname = 'homeyegod';
     $host='localhost';
     $user='root';
     $password='root';

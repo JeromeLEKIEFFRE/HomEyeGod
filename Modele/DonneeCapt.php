@@ -4,15 +4,20 @@ require ('connexion_db.php');
 function getDonnee($db,$idCapteur){
     $sql = 'SELECT Datas FROM donnees WHERE idCapteur="'.$idCapteur.'"';
     $reponse = $db->query($sql);
-    return $reponse;
+    $reponsefetch = $reponse->fetchAll();
+    return $reponsefetch;
 }
 
-function readDonnee($db,$Datas){
-    $sql = 'SELECT CAST( "'.$Datas.'" as char) FROM donnees';
+function listsalles($db,$idMaison){
+    $sql='SELECT * FROM pieces WHERE idMaison="'.$idMaison.'"';
     $reponse = $db->query($sql);
-    return $reponse;
+    $reponsefetch = $reponse->fetchAll();
+    return $reponsefetch;
 }
 
-/*function tempmoy($db,$idMaison){
-    $sql='select ' Données
-}*/
+function listetypescapteurs($db,$idMaison){
+    $sql='SELECT * FROM typecapteur JOIN capteurs ON typecapteur.TypeValue=capteurs.Type WHERE idMaison="'.$idMaison.'"';
+    $reponse = $db->query($sql);
+    $reponsefetch = $reponse->fetchAll();
+    return $reponsefetch;
+}
