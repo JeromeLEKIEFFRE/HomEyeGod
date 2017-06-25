@@ -24,7 +24,7 @@
         </nav>
     <section>
         <p>
-            Les modifications on bien été modifier.
+            Les modifications on bien été enregistrer.
         </p>
         <form method="POST" action="gestioncapt2.html">
             <input type="submit" name="Acceuil" value="Acceuil" >
