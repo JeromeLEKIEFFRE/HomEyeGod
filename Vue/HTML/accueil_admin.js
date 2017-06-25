@@ -32,9 +32,42 @@ function modifLongueur(page) {
 
 }
 
-function fill_text_area(text_name){
-    var cont = document.getElementsByName(text_name);
+function fill_text_area(str) {
+    if (str == "") {
+        document.getElementById("html_code").value = "";
+        return;
+    }
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        if (window.ActiveXObject)
+            try {
+                xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                try {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                } catch (e) {
+                    return NULL;
+                }
+            }
+    }
 
+        xmlhttp.onreadystatechange = function ()
+        {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+            {
+                document.getElementById("html_code").value = xmlhttp.responseText;
+                document.getElementById("p_name").value = str;
+                console.log(xmlhttp.responseText);
+            }
+        }
+        xmlhttp.open("GET", "../../Modele/fill_text.php?text=" + str, true);
+        xmlhttp.send();
+    }
+
+
+function get_name(id){
+    return document.getElementById("html_code").name
 }
 // fonction pour ajouter un écouteur à t
 /*function load() {

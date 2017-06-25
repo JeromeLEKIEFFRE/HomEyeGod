@@ -40,14 +40,27 @@
 
     <section class="rectangle_flex_modif">
         <div class="list_page">
-                <?php echo recup_page_name($db)?>
+            <ul>
+                <!--<?php //echo recup_page_name($db)?>-->
+            <?php
+            foreach(recup_page($db) as $row){?>
+                <li> <?php echo $row['name_page']?>  </li>
+                <ul>
+                    <?php foreach (recup_sous_page($db,$row['name_page'])as $under_row){ ?>
+                    <li id="<?php echo $under_row['name_text'] ?>" onclick = "fill_text_area(this.id)"> <?php echo $under_row['name_text']?> </li>
+                    <?php }?>
+                </ul>
+            <?php }?>
+            </ul>
         </div>
+
         <div class="page_code">
-            <form class="store_text">
-               <textarea id="html_code">
+            <form action="../../Controleur/Controleur.php" method="POST" class="store_text">
+                <textarea id="html_code" name="html_code">
 
                 </textarea>
-
+                <input type="submit" value="Modifier">
+                <input id="p_name" type="hidden" name="p_name" value="">
             </form>
 
         </div>
