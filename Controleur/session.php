@@ -6,3 +6,4 @@ $_SESSION['Prenom'] = $_POST['prenom'];
 $_SESSION['idAdressePrincipale'] = $_POST['idadresseprincipale'];
 $_SESSION['Mail'] = $_POST['mail'];
 $_SESSION['NomUtilisateur'] = $_POST['nomutilisateur'];
+$_SESSION['idUtilisateur'] = $_POST['idUtilisateur'];
