@@ -14,6 +14,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../CSS/styleGestionMaison.css" />
     <title>Gestion de ma maison</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 
 <body>
@@ -84,6 +85,7 @@
             </div>
         </div>
     </div>
-<script type="texte/javascript" src="Gestion_Maison.js"></script>
+<script type="text/javascript" src="../JS/Gestion_Maison.js"></script>
+
 </body>
 </html>

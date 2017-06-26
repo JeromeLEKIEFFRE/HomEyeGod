@@ -1,6 +1,3 @@
-/**
- * Created by jlWin on 26/06/2017.
- */
 function cachershowgeneral(){
     var x = document.getElementById('showgeneral');
     var y = document.getElementById('showdatas');

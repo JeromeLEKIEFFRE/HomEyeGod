@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-*
 {
     font-family: "Arial";
 }
@@ -11,46 +9,14 @@ body{
 
 header
 {
-<<<<<<< HEAD
     color: #4c74a1;
     margin-left: 20px;
     height: 20%;
-=======
-	background-color: #4c74a1;
-	bottom: 200px;
-	margin-left: auto;
->>>>>>> master
 }
 
 p, h1
 {
     color: #4c74a1;
-}
-
-h2
-{
-    text-align: center;
-    color: #4c74a1;
-    font-size: 2em;
-}
-
-form
-{
-    line-height:40px;
-    margin-left: 70px;
-}
-
-label
-{
-    display: block;
-    width: 300px;
-    float: left;
-    color: #4c74a1;
-}
-
-aside
-{
-    margin-block-end:  auto;
 }
 
 nav
@@ -81,13 +47,6 @@ nav ul li a
     padding: 1em 2em 1em 2em;
 }
 
-label
-{
-    display: block;
-    width: 300px;
-    float: left;
-    color: #4c74a1;
-}
 
 ul
 {
@@ -110,24 +69,11 @@ ul li a
     padding: 1em 2em 1em 2em;
 }
 
-/*Annonce*/
-.rectangle_annonce
+/*Navigation*/
+.navigation a
 {
-    display: flex;
-    border: 2px solide;
-    border-color: whitesmoke;
-    width : 100%;
-    height : 100px;
-    text-align: center;
-    background-color: #256da0;
-}
-
-.rectangle_annonce p
-{
-    text-align: center;
-    color: white;
-    font-size: 3em;
-    margin:auto;
+	color: white;
+	text-decoration: none;
 }
 
 /*Gestion Capteurs*/
@@ -222,296 +168,3 @@ ul li a
 {
     flex-wrap:wrap;
 }
-
-.code_page p
-{
-    margin: 10%;
-    color:black;
-}
-
-.code_page h3
-{
-    margin: 10%;
-    color: black;
-}
-
-.titre_page{
-    width: 100%;
-    height: 100px;
-    line-height: 70px;
-}
-=======
-*
-{
-	font-family: "Arial";
-}
-
-/*Navigation*/
-#navigation a
-{
-    color: white;
-    text-decoration: none;
-}
-.navigation a
-{
-	color: white;
-	text-decoration: none;
-}
-
-.button
-{
-	text-align: center;
-}
-.flotteG
-{
-	float: left;
-}
-.flotteD
-{
-	float: right;
-}
-
-.section_inscription
-{
-	display: flex;
-    justify-content: space-around;
-}
-.piece
-{
-	border: 1px white groove;
-	color: white;
-	display: flex;
-	flex-direction: column;
-	width: 10em;
-  	padding: 1.2em;
-}
-.pieces{
-  text-align: center;
-}
-.image
-{
-
-	width: auto;
-	height: 20em;
-}
-
-/* style page d'acceuil*/
-.section1
-{
-	display: flex;
-	background-color: #406694;
-	color: white;
-	flex: space-between;
-
-}
-.section1, .section2{
-	height: 20em;
-}
-.section1 p, .section2 p
-{
-	color: white;
-}
-.article1
-{
-	text-align: center;
-	width: 75%;
-}
-.section2
-{
-	background-color: #597EAA;
-	color:white;
-	display: flex;
-	flex: space-between;
-}
-.contact_c p 
-{
-	color: black;
-	font-size: 20px;
-	font-weight: normal;
-}
-.contact_c h2
-{
-	color: black;
-}
-
-/*css d'une autre page */
-.section_ma_maison
-{
-    background-image: url("fleur_fond.jpg"); /* image de fond fixe pour l'instant, personna*/
-    background-repeat: no-repeat;
-	background-size: 100%;
-}
-
-.navbandeau
-{
-	background-color: #4c74a1; 		/*bleu stylé*/
-    display: flex; 					/*propriété flex*/
-    justify-content: space-around;
-    flex-wrap: nowrap;
-}
-
-
-
-.abandeau
-{
-	color: white;				/*les liens du bandeau en gras, non-souligné, et blanc*/
-	text-decoration:none;
-    font-weight: bold;
-}
-
-
-.libandeau
-{ 
-	display : inline;
-	padding : 0 2em; /* Pour espacer les boutons entre eux */
-	text-align: center;
-}
-
-.sectionactions
-{
-  text-align: center;
-}
-
-.sectionactions li
-{
-	border: 1px #4c74a1 groove;
-	color: #4c74a1;
-	display: flex;
-	flex-direction: column;
-	width: 10em;
-  	padding: 1.2em;
-  	font-weight: bold;
-}
-
-
-.sectionpieces
-{
-	border: 2px #4c74a1 groove;
-	width: 18em;
-	height: 26em;
-	text-align: center;
-}
-
-
-.sectionpieces li
-{
-	border-bottom: 1px #4c74a1 groove;
-	color: #4c74a1;
-	display: flex;
-	flex-direction: column;
-	width: 7em;
-  	padding: 1.2em;
-  	font-weight: bold;
-} 
-
-.sectioncapteurs
-{
-	border: 2px #4c74a1 groove;
-	width: 24em;
-	height: 26em;
-	text-align: center;
-}
-
-.sectioncapteurs li
-{
-	border-bottom: 1px #4c74a1 groove;
-	color: #4c74a1;
-	display: flex;
-	flex-direction: column;
-	width: 10em;
-  	padding: 1.2em;
-  	font-weight: bold;
-}
-<<<<<<< HEAD
->>>>>>> master
-=======
-.modif_admin{
-	background-color: #7192bb;
-	width : 50%;
-	height : 100%;
-	margin: 0;
-	transition: width 1000ms , visibility 500ms;
-}
-
-.consult_admin{
-	background-color: #406694;
-	width : 50%;
-	height : 100%;
-	margin: 0;
-	transition: width 1000ms , visibility 1000ms;
-}
-
-.consult_admin p{
-	visibility : visible;
-}
-
-.rectangle_flex_acc {
-	display: flex;
-	justify-content: space-around;
-	height: 500px;
-	width : 100%;
-	margin:0;
-	transition: width 1000ms , visibility 1000ms;
-}
-
-.rectangle_flex_consult{
-	display: none;
-	justify-content: space-around;
-	margin: 0;
-	padding: 0;
-	height:100%;
-	width:100%;
-	transition: width 500ms, visibility 500ms;
-
-}
-.rectangle_flex_modif{
-	display: none;
-	justify-content: space-around;
-	height: 100%;
-	margin:0;
-	padding:0;
-	width : 100%;
-	transition: width 500ms , visibility 500ms;
-
-}
-.rectangle_flex_encadre{
-	display: flex;
-	justify-content: space-around;
-	height: 500px;
-	margin:0;
-	padding: 0;
-	width:100%;
-}
-
-.list_page{
-	background-color: #406694;
-	display: flex;
-	height: 100%;
-	width: 15%;
-}
-.page_code{
-	display: flex;
-	height:100%;
-	width: 85%;
-}
-
-#html_code {
-	display: flex;
-	margin: auto;
-	height:80%;
-	width:80%;
-	background-color: #dee7ff;
-	color: white;
-	font-size: 20px;
-
-}
-.store_text {
-	display: flex;
-	height:100%;
-	width:100%;
-}
-.store_text input{
-	height:10%;
-	width: 20%;
-}
->>>>>>> master
