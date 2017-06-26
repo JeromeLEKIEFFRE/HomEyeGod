@@ -14,7 +14,7 @@
     ?>
 <header>
     <h1>
-        <a href="home_page.html"><img src="../BANK/logo-accueilDiv2_admin.png" height="15%" width="15%" alt="retour vers l'accueil" /></a>
+        <a href="home_page.html"><img src="../Bank/logo-accueilDiv2_admin.png" height="15%" width="15%" alt="retour vers l'accueil" /></a>
     </h1>
 </header>
 <nav>
