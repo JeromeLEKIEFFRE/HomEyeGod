@@ -25,15 +25,14 @@
     </header>
     <nav>
         <ul id="navigation">
-                <li><a href="home_page.html">Accueil </a></li>
-                <li><a href="boutique.html">Boutique</a></li>
-                <li><a href="aide.html">Aide</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <li><a href="gestioncompte.php">Mon Compte</a></li>
+            <li><a href="Gestion_Maison.php">Ma maison</a></li>
+            <li><a href="aide.html">Aide</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <div class="gestion_capt">
-
         <div class="showpiece">
             <p>Pièces</p>
             <ul class="listepiece">
