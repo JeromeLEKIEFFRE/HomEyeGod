@@ -5,10 +5,12 @@
 </head>
 
 <?php
+
 $dbname = 'homeyegod';
 $host='localhost';
 $user='root';
 $password='root';
+
 try {
     $bdd = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$password");
 }
@@ -16,13 +18,8 @@ catch (Exception $e)
 {
     die('Erreur : ' . $e->getMessage());
 }
-$infoU1 = $bdd->query('SELECT * FROM utilisateurs WHERE idUtilisateur = 1');
-$infoU=$infoU1 -> fetch();
-$infoM1 = $bdd->query('SELECT * FROM maisons WHERE idUtilisateur = 1');
-$infoM=$infoM1 -> fetch();
-$p=$infoM['TypeVoie'];
-$infoV1 = $bdd->query('SELECT TypeName FROM typevoie WHERE TypeValue = "'.$p.'"');
-$infoV=$infoV1 -> fetch();
+include ("../Modele/fonction_gestion_compte.php");
+session_start();
 ?>
     <body>
         <header>
@@ -44,36 +41,32 @@ $infoV=$infoV1 -> fetch();
             <div class="gestion_c">
             <aside>
         		<p>Sexe <?php ?><br/>
-        		Nom<br/>
-        		Prénom  <br/>
-        		Nom d'utilisateur<br/>
-        		Code postal<br/>
-        		Ville<br/>
-        		adresse<br/>
-        		email<br/>
-        		Numéro de téléphone<br/>
-                Numéro de téléphone Fixe</p>
+        		Nom:<br/>
+        		Prénom:  <br/>
+        		Nom d'utilisateur:<br/>
+        		Code postal:<br/>
+        		Ville:<br/>
+        		adresse:<br/>
+        		email:<br/>
+        		Numéro de téléphone:<br/>
+                Numéro de téléphone Fixe:    </p>
             </aside>
         	<aside>
                 <p> homme<br/>
-                    <?php echo $infoU['Nom']?><br/>
-                    <?php echo $infoU['Prenom']?><br/>
-                    <?php echo $infoU['NomUtilisateur']?><br/>
-                    <?php echo $infoM['numero_voie'],' ',$infoV['TypeName'],' ',$infoM['Voie'] ?><br/>
-                    <?php echo $infoM['code_postal']?><br/>
-                    <?php echo $infoM['Ville']?><br/>
-                    <?php echo $infoU['Mail']?><br/>
-                    <?php echo $infoU['Mobile']?><br/>
-                    <?php echo $infoU['Numero']?><br/>
+                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Nom']?><br/>
+                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Prenom']?><br/>
+                    <?php echo infoU($db,$_SESSION[idUtilisateur])['NomUtilisateur']?><br/>
+                    <?php echo infoM($db,$_SESSION[idUtilisateur])['code_postal']?><br/>
+                    <?php echo infoM($db,$_SESSION[idUtilisateur])['Ville']?><br/>
+                    <?php echo infoM($db,$_SESSION[idUtilisateur])['numero_voie'],' ',infoV($db,$_SESSION[idUtilisateur])['TypeName'],' ',infoM($db,$_SESSION[idUtilisateur])['Voie'] ?><br/>
+                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Mail']?><br/>
+                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Mobile']?><br/>
+                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Numero']?><br/>
                 </p>
         	</aside>
             </div>
-            <?php
-            $Type1 = $bdd->query('SELECT * FROM typevoie');
-            $Type = $Type1 -> fetchAll();
-            ?>
         	<h1>Changer données personnelles</h1>
-                <form action="../Modele/Formulaire_update.php" method="post">
+                <form action="../Controleur/controleur_gestion.php" method="post">
         		<label for="Nom d'utilisateur"> Nom d'utilisateur:</label><input type="text" name="Nom_utilisateur" /><br/>
 				<label for="Mot de passe"> Mot de passe:</label><input type="password" name="Mot_de_passe" /><br/>
                 <label for="Confirmer le mot de passe"> Confimer le mot de passe:</label><input type="password"  name="confirmer"/> <br/>
@@ -92,8 +85,9 @@ $infoV=$infoV1 -> fetch();
                 <label for="Numéro de téléphone fixe"> Numéro de téléphone fixe:</label><input type="tel" name="fixe"/><br/>
 
             <h1>Saisie du mot de passe actuel pour confirmé</h1>
+                    <label for="Mot de passe actuel"> Mot de passe actuel:</label><input type="password" name="Mot_de_passe_actuel" /><br/>
 				<label for="valider"></label><input type="submit" name="valider" />
-                </form>
+                </form>?>
             <aside>
             </aside>
             <article>                
