@@ -12,8 +12,8 @@ function import(){
     $data_tab = str_split($data,19);
     $trame = $data_tab[1];
     list($t,$o,$r,$c,$n,$v,$a,$x,$year,$month,$day,$hour,$min,$sec) =sscanf($trame,"%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
-    $donn=$db->query('SELECT Datas FROM donnees WHERE idCapteur="'.$n.'"');
-    $donnf=$donn->fetch;
+    //$donn=$db->query('SELECT Datas FROM donnees WHERE idCapteur="'.$n.'"');
+    //$donnf=$donn->fetch;
     $DATE=$year+$month+$day+$hour+$min+$sec;
     $sql='INSERT "'.$a.'","'.$n.'","'.$DATE.'","'.$v.'" INTO donnees';
     $db->exec($sql);
