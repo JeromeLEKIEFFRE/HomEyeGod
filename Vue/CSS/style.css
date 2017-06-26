@@ -30,11 +30,6 @@ h2
     font-size: 2em;
 }
 
-form
-{
-    line-height:40px;
-    margin-left: 70px;
-}
 label
 {
     display: block;
@@ -214,9 +209,8 @@ aside
 }
 
 #html_code {
-    display: flex;
-    margin: auto;
-    height:80%;
+    justify-content: center;
+    min-height: 80%;
     width:80%;
     background-color: #dee7ff;
     color: white;
@@ -224,8 +218,6 @@ aside
 
 }
 .store_text {
-    display: flex;
-    height:100%;
     width:100%;
 }
 .store_text input{

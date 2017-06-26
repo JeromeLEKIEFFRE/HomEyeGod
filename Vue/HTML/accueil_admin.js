@@ -69,6 +69,8 @@ function fill_text_area(str) {
 function get_name(id){
     return document.getElementById("html_code").name
 }
+
+
 // fonction pour ajouter un écouteur à t
 /*function load() {
     var el = document.getElementsByClassName("modif_admin");
