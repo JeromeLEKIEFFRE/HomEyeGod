@@ -1,7 +1,7 @@
 <?php
-require ("Gestion_Maison.js");
+require("Gestion_Maison.js");
 require ("DonneeCapt.php");
-require ("Gestion_Maison.php")
+require("Gestion_Maison.php")
     ?>
     <div id="1">
     <h3>Information capteurs</h3>
