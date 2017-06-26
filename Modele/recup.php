@@ -16,11 +16,17 @@ function recup_all_broken_capt($db){
     return $option;
 }
 function recup_name($db){
-    $return = $db -> query('SELECT * FROM utilisateurs');
-    $option = "" ;
-    foreach ($return as $row)
-        $option .= "<li>" . $row['NomUtilisateur'] . "</li>";
-    return $option;
+    $return = $db -> query('SELECT * FROM utilisateurs JOIN roles ON utilisateurs.Roles = roles.RoleValue ORDER BY NomUtilisateur ASC ');
+    $option = "<div class='nom_user'> <p>Nom d'utilisateur</p>" ;
+    $option2 = "<div class='role_user'> <p>Rôle</p> " ;
+
+    foreach ($return as $row) {
+        $option .= $row['NomUtilisateur'] . "<br/>";
+        $option2 .= $row['RoleName'] . "<br/>";
+    }
+    $option.="</div>";
+    $option2.="</div>";
+    return array($option,$option2);
 }
 // MODIFICATION ADMIN
 function recup_page_name($db){

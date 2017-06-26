@@ -2,10 +2,17 @@
 {
     font-family: "Arial";
 }
-body{
-    margin:auto;
-    padding: auto;
+
+html{
+    position: relative;
+    height: 100%;
 }
+
+html, body {
+    margin: 0;
+    min-width: 100%;
+}
+
 header
 {
     color: #4c74a1;
@@ -21,7 +28,7 @@ nav
 }
 p, h1
 {
-    color: #4c74a1;
+    color: white;
 }
 h2
 {
@@ -169,7 +176,6 @@ aside
 
 .rectangle_flex_consult{
     display: none;
-    justify-content: space-around;
     margin: 0;
     padding: 0;
     height:100%;
@@ -224,4 +230,25 @@ aside
     height:10%;
     width: 20%;
 }
+.print_users {
+    background-color: #406694;
+    height: 100%;
+    width:270px;
+    display: flex;
+    text-align: center;
+    margin-left: 0px;
+}
+h4{
+    text-align: center;
+    color: white
+}
+#list_users{
+    list-style-type: none;
+}
+table{
+    justify-content: space-around;
+}
+.line_user{
+    text-align: center;
 
+}

@@ -14,7 +14,7 @@
     ?>
 <header>
     <h1>
-        <a href="home_page.html"><img src="../BANK/logo-accueilDiv2_admin.png" height="15%" width="15%" alt="retour vers l'accueil" /></a>
+        <a href="home_page.html"><img src="../Bank/logo-accueilDiv2_admin.png" height="15%" width="15%" alt="retour vers l'accueil" /></a>
     </h1>
 </header>
 <nav>
@@ -65,16 +65,20 @@
 
     <section class="rectangle_flex_consult">
         <div class="print_users">
-            <ul class="print_users" name="list">
-                <?php echo recup_name($db)?>
-            </ul>
+                <aside><?php echo recup_name($db)[0]?></aside>
+                <aside><?php echo recup_name($db)[1]?></aside>
         </div>
-        <div class="print_users" name="list2">
-            <ul class="print_users">
+        <div class="print_breakdown" name="list2">
+            <ul id="list_breakdown">
                 <?php echo recup_all_broken_capt($db)?>
             </ul>
         </div>
+        <div class="show_info">
 
+        </div>
+        <div class="print_capteur">
+
+        </div>
     </section>
 </section>
 
