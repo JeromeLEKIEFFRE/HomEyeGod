@@ -28,7 +28,7 @@ nav
 }
 p, h1
 {
-    color: #4c74a1;
+    color: white;
 }
 h2
 {
@@ -232,8 +232,23 @@ aside
 }
 .print_users {
     background-color: #406694;
-    width: 20%;
+    height: 100%;
+    width:270px;
+    display: flex;
+    text-align: center;
+    margin-left: 0px;
 }
 h4{
-    align-items:center;
+    text-align: center;
+    color: white
+}
+#list_users{
+    list-style-type: none;
+}
+table{
+    justify-content: space-around;
+}
+.line_user{
+    text-align: center;
+
 }
