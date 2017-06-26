@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mer 07 Juin 2017 à 09:14
+-- Généré le :  Lun 26 Juin 2017 à 17:22
 -- Version du serveur :  5.7.11
 -- Version de PHP :  7.1.5
 
@@ -78,6 +78,13 @@ CREATE TABLE `capteurs` (
   `idMaison` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Contenu de la table `capteurs`
+--
+
+INSERT INTO `capteurs` (`idCapteur`, `idUtilisateur`, `Etat`, `Type`, `idPièce`, `idMaison`) VALUES
+(1, 1, 1, 4, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -130,7 +137,7 @@ INSERT INTO `maisons` (`idMaison`, `idUtilisateur`, `numero_voie`, `TypeVoie`, `
 CREATE TABLE `pieces` (
   `idPiece` int(11) NOT NULL,
   `idMaison` int(11) NOT NULL,
-  `Nom` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+  `Nom` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'Nouvelle Salle'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -138,7 +145,7 @@ CREATE TABLE `pieces` (
 --
 
 INSERT INTO `pieces` (`idPiece`, `idMaison`, `Nom`) VALUES
-(1, 1, 'Cusine'),
+(1, 1, 'Cuisine'),
 (2, 1, 'Entrée'),
 (3, 1, 'Chambre Parents'),
 (4, 1, 'Chambre Enfant'),
@@ -179,8 +186,24 @@ INSERT INTO `roles` (`RoleValue`, `RoleName`) VALUES
 
 CREATE TABLE `typecapteur` (
   `TypeValue` int(11) NOT NULL,
-  `TypeName` int(20) NOT NULL
+  `TypeName` varchar(100) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Contenu de la table `typecapteur`
+--
+
+INSERT INTO `typecapteur` (`TypeValue`, `TypeName`) VALUES
+(1, 'Distance'),
+(2, 'Distance'),
+(3, 'Température'),
+(4, 'Humidité'),
+(5, 'Lumière'),
+(6, 'Couleur'),
+(7, 'Présence'),
+(8, 'Lumière'),
+(9, 'Mouvement'),
+(10, 'Présence');
 
 -- --------------------------------------------------------
 
@@ -218,25 +241,26 @@ INSERT INTO `typevoie` (`TypeValue`, `TypeName`) VALUES
 
 CREATE TABLE `utilisateurs` (
   `idUtilisateur` int(11) NOT NULL,
-  `Rôles` int(1) DEFAULT '0' COMMENT 'User/SuperUser/SuperRoot',
+  `Roles` int(1) DEFAULT '0' COMMENT 'User/SuperUser/SuperRoot',
   `Nom` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `Prénom` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `Prenom` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `idAdressePrincipale` int(11) NOT NULL,
   `Numero` text COLLATE utf8_unicode_ci NOT NULL,
   `Mobile` text COLLATE utf8_unicode_ci NOT NULL,
   `Mail` text COLLATE utf8_unicode_ci NOT NULL,
   `NomUtilisateur` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
-  `Mdp` text COLLATE utf8_unicode_ci NOT NULL
+  `Mdp` text COLLATE utf8_unicode_ci NOT NULL,
+  `sexe` varchar(10) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Utilisateurs';
 
 --
 -- Contenu de la table `utilisateurs`
 --
 
-INSERT INTO `utilisateurs` (`idUtilisateur`, `Rôles`, `Nom`, `Prénom`, `idAdressePrincipale`, `Numero`, `Mobile`, `Mail`, `NomUtilisateur`, `Mdp`) VALUES
-(1, 1, 'Dupont', 'Tartempion', 1, '018888888', '0609090909', 'dupont.tartempion@mail.com', 'Dudule', 'MotdePasse'),
-(2, 2, 'Admin', 'Admin', 2, '0800810550', '0800810550', 'Admin.Admin@semigod.com', 'Admin', 'Admin'),
-(3, 3, 'Super', 'User', 3, '0800810560', '0800810560', 'super.user@god.com', 'root', 'root');
+INSERT INTO `utilisateurs` (`idUtilisateur`, `Roles`, `Nom`, `Prenom`, `idAdressePrincipale`, `Numero`, `Mobile`, `Mail`, `NomUtilisateur`, `Mdp`, `sexe`) VALUES
+(1, 1, 'Dupont', 'Tartempion', 1, '018888888', '0609090909', 'dupont.tartempion@mail.com', 'Dudule', 'MotdePasse', 'Homme'),
+(2, 2, 'Admin', 'Admin', 2, '0800810550', '0800810550', 'Admin.Admin@semigod.com', 'Admin', 'Admin', 'Femme'),
+(3, 3, 'Super', 'User', 3, '0800810560', '0800810560', 'super.user@god.com', 'root', 'root', 'Homme');
 
 --
 -- Index pour les tables exportées
@@ -327,7 +351,7 @@ ALTER TABLE `alerte`
 -- AUTO_INCREMENT pour la table `capteurs`
 --
 ALTER TABLE `capteurs`
-  MODIFY `idCapteur` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCapteur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `donnees`
 --
