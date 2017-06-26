@@ -16,7 +16,7 @@ $prenom=         $_POST["prenom"];
 else
     echo "erreur prenom";
 
-if ($_POST["sexe"] != NULL)
+if ($_POST["sexe"] =="homme" || $_POST["sexe"]=="femme")
 $sexe= $_POST["sexe"];
 else
     echo "erreur sexe";
@@ -75,7 +75,6 @@ if ($_POST["valider"] //vérification des champs
     AND $mdp !=NULL
     AND $confirm_mdp !=NULL
     AND (password_verify($confirm_mdp,$mdp)) //vérification même mdp
-    AND $adresse!=NULL
     AND $code_postal !=NULL
     AND $ville !=NULL
     AND $email != NULL
