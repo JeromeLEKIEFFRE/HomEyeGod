@@ -65,27 +65,27 @@ function fill_text_area(str) {
 
 function modif_text_admin(str,cont) {
     console.log(cont);
-        if (window.XMLHttpRequest) {
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            if (window.ActiveXObject)
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        if (window.ActiveXObject)
+            try {
+                xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
                 try {
-                    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                 } catch (e) {
-                    try {
-                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                    } catch (e) {
-                        return NULL;
-                    }
+                    return NULL;
                 }
-        }
-
-        // {"n_modified": 1}, JSON.parse(xhttp.responseTxt).n_modified;
-        // query.php?var0=value_var0&var1=value_var1
-        xmlhttp.open("GET", "../../Controleur/submit_modif.php?text=" + str + "&cont=" +cont, true);
-        xmlhttp.send();
-
+            }
     }
+
+    // {"n_modified": 1}, JSON.parse(xhttp.responseTxt).n_modified;
+    // query.php?var0=value_var0&var1=value_var1
+    xmlhttp.open("GET", "../../Controleur/submit_modif.php?text=" + str + "&cont=" +cont, true);
+    xmlhttp.send();
+
+}
 
 function get_html_code(){
     return document.getElementById("html_code").value;
@@ -97,14 +97,14 @@ function get_p_name() {
 
 // fonction pour ajouter un écouteur à t
 /*function load() {
-    var el = document.getElementsByClassName("modif_admin");
-    el.addEventListener("click", modifieTexte, false);
-}*/
+ var el = document.getElementsByClassName("modif_admin");
+ el.addEventListener("click", modifieTexte, false);
+ }*/
 
 /*function myFunction() {
-    var x = document.getElementsByClassName("");
-    var i;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.backgroundColor = "red";
-    }
-}*/
+ var x = document.getElementsByClassName("");
+ var i;
+ for (i = 0; i < x.length; i++) {
+ x[i].style.backgroundColor = "red";
+ }
+ }*/
