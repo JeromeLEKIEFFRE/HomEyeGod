@@ -1,14 +1,21 @@
 <?php
 require("connexion_db.php");
 
-function insertNewUser($db,$username,$mdp,$nom,$prenom,$numero_tel,$numero_tel_fixe,$email)
+function insertNewUser($db,$username,$mdp,$nom,$prenom,$numero_tel,$numero_tel_fixe,$email,$sexe)
 {
     // Créer un nouvel utilisateur /!\ à faire après avoir crée la maison avec les input de la demande d'adresse qui sera celui de la maison 'principale'
     $sql=$db->prepare('INSERT INTO utilisateurs 
-    VALUES (NULL, 1, "'.$nom.'", "'.$prenom.'","'.$sexe.'",1, "'.$numero_tel.'", "'.$numero_tel_fixe.'", "'.$email.'", "'.$username.'", "'.$mdp.'")');
+    VALUES (NULL,"1","'.$nom.'","'.$prenom.'","'.$sexe.'","1","'.$numero_tel.'","'.$numero_tel_fixe.'","'.$email.'","'.$username.'","'.$mdp.'")');
     $sql->execute();
 }
 
+function verify($db)
+{
+    $sql='SELECT Nom FROM utilisateurs WHERE idUtilisateur=(SELECT MAX(idUtilisateur) FROM utilisateurs)';
+    $rep = $db->query($sql);
+    $repf=$rep->fetch();
+    return $repf;
+}
 
 
 function newIdUtilisateur($db){
@@ -30,12 +37,5 @@ function idHome($db,$idUtilisateur){
     $sql = 'SELECT idMaison FROM maisons WHERE idUtilisateur = "'.$idUtilisateur.'"';
     $reponse = $db->query($sql);
     return $reponse;
-}
-function verify($db)
-{
-    $sql='SELECT Nom FROM utilisateurs WHERE idUtilisateur=(SELECT MAX(idUtilisateur) FROM utilisateurs)';
-    $rep = $db->query($sql);
-    $repf=$rep->fetch();
-    return $repf;
 }
 ?>

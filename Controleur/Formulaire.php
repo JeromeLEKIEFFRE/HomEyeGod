@@ -1,13 +1,12 @@
 <?php
-//comment
+
 // Contrôleur pour le formulaire inscription
 include ("../Modele/Verification.php");
 include ("../Modele/connexion_db.php");
 include ("../Modele/Insertion_BDD.php");
 
-//email="test@exemple.com";
-//affectation des données du formulaires en variables php
-if ($_POST != NULL)
+
+if ($_POST["nom"] != NULL)
 $nom = $_POST["nom"];
 else
     echo "erreur nom";
@@ -17,7 +16,7 @@ $prenom=         $_POST["prenom"];
 else
     echo "erreur prenom";
 
-if ($_POST["sexe"] =="homme" || $_POST["sexe"]=="femme")
+if ($_POST["sexe"] == "homme" || $_POST["sexe"]=="femme")
 $sexe= $_POST["sexe"];
 else
     echo "erreur sexe";
@@ -61,12 +60,15 @@ else
 
 if ($_POST["type_voie"] !=NULL)
 $type_voie=$_POST["type_voie"];
+else echo"erreur type voie";
 
 if ($_POST["voie"] !=NULL)
 $voie=$_POST["voie"];
+else echo "erreur voie";
 
 if ($_POST["numero_voie"] !=NULL)
 $numero_voie=$_POST["numero_voie"];
+else echo "erreur numero_voie";
 
 if ($_POST["valider"] //vérification des champs
     AND $nom !=NULL
@@ -82,7 +84,7 @@ if ($_POST["valider"] //vérification des champs
     AND filter_var($email, FILTER_VALIDATE_EMAIL) //email valide?
     AND idMail($db, $email)->rowcount()==NULL //vérification présence du mail dans bdd
     AND $_POST["numero_tel"]!=NULL ){
-    insertNewUser($db,$username,$mdp,$nom,$prenom,$numero_tel,$numero_tel_fixe,$email);
+    insertNewUser($db,$username,$mdp,$nom,$prenom,$numero_tel,$numero_tel_fixe,$email,$sexe);
     echo (verify($db)['Nom']);
     //newIdUtilisateur($db);
     //newHome($db, idUtilisateur($db,$_POST["Nom_utilisateur"]),$_POST["Ville"], NULL, $_POST["Numero_de_telephone"], NULL, NULL, $_POST["Code_Postal"]);

@@ -8,7 +8,7 @@
 
 <body>
 <header>
-    <h1><a href="../Vue/home_page.html"><img src="../Vue/Images/logo-accueilDiv2.png" alt="logo GerHome" /></a></h1>
+    <h1><a href="../Vue/home_page.html"><img src="../Vue/Images/logo-HEG.png" alt="logo GerHome" /></a></h1>
 </header>
 <div class="titre_page">
     <h1>GerHome</h1>
@@ -25,10 +25,6 @@
 
     </form>
 </section>
-
-<footer>
-
-</footer>
 
 </body>
 </html>

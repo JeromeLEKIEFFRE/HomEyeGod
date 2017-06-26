@@ -8,10 +8,15 @@ function connexion_check_username($db, $username)
     $repf=$rep->fetch();
     return $repf;
 }
-function connexion_check_password($db, $NomUtilisateur)
+function connexion_check_password($db, $username)
 {
-    $sql='SELECT Mdp,idUtilisateur,Roles FROM utilisateurs WHERE NomUtilisateur="'.$NomUtilisateur.'"';
+    $sql='SELECT Mdp FROM utilisateurs WHERE idUtiliateur = "onnexion_check_username($db, $username)"';
     $rep = $db->query($sql);
     $repf=$rep->fetch();
     return $repf;
+}
+$crypted_pwd=connexion_check_password($db, $username);
+function password_verif$db, $username, $password)
+{
+    if (password_verify('$password','$crypted_pwd'))
 }
