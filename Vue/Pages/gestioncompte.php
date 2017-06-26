@@ -24,7 +24,10 @@ include("../../Modele/fonction_gestion_compte.php");
 </head>
     <body>
         <header>
+            <script>show_admin_button(<?php$_SESSION['Role']?>)</script>
             <h1><a href="home_page.html"><img src="logo-accueil.png" height="15%" width="15%" alt="logo HomEyeGod" /></a></h1>
+            <input type="button" value="Admin" id="pop_up_admin">
+            <script type="text/javascript" src="admin_bouton.js"></script>
         </header>
         <nav>
             <ul id="navigation">
@@ -96,5 +99,5 @@ include("../../Modele/fonction_gestion_compte.php");
         <footer>
             
         </footer>
-        
+
     </body>

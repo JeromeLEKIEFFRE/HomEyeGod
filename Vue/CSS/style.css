@@ -233,3 +233,6 @@ aside
 .gestion_c {
 	display: flex;
 }
+#pop_up_admin{
+	display: none;
+}
