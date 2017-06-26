@@ -1,3 +1,29 @@
+$(function() {
+    $('#listepiece').css('display', 'list-istem');
+    $('#listepiece').click(function(event) {
+        var actuel = event.target;
+        if (!/li/i.test(actuel.nodeName) || actuel.className.indexOf('actif') > -1) {
+            return;
+        }
+        $(actuel).addClass('actif').siblings().removeClass('actif');
+        setDisplay();
+    });
+    function setDisplay() {
+        var modeAffichage;
+        $('#listepiece li').each(function(rang) {
+            modeAffichage = $(this).hasClass('actif') ? '' : 'none';
+            $('.doncapt').eq(rang).css('display', modeAffichage);
+        });
+    }
+    setDisplay();
+});
+
+
+
+
+/*
+
+
 function cachershowgeneral(){
     var x = document.getElementById('showgeneral');
     var y = document.getElementById('showdatas');
@@ -42,3 +68,5 @@ function affichersg(){
     document.getElementById('showdatas').style.display='flex';
     document.getElementById('showdatas')
 }
+
+*/
