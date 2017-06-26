@@ -71,13 +71,15 @@ include("../../Modele/connexion.php");
             <aside><?php echo recup_name($db)[0]?></aside>
             <aside><?php echo recup_name($db)[1]?></aside>
         </div>
-        <div class="print_breakdown" name="list2">
-            <ul id="list_breakdown">
-                <?php echo recup_all_broken_capt($db)?>
-            </ul>
-        </div>
-        <div class="show_info">
+        <div class="info">
+            <div class="print_breakdown" name="list2">
+                <ul id="list_breakdown">
+                    <?php echo recup_all_broken_capt($db)?>
+                </ul>
+            </div>
+            <div class="show_info">
 
+            </div>
         </div>
         <div class="print_capteur">
 

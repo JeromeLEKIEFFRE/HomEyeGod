@@ -251,3 +251,30 @@ table{
 .line_user{
     text-align: center;
 }
+.rectangle_flex_consult {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.info {
+    flex: 1;
+    width: 50%;
+    flex-direction: column;
+    margin: 0px;
+}
+
+.print_capteur{
+    width: 25%;
+    margin-right:0px;
+    background-color:orange ;
+}
+.print_breakdown{
+    background-color:green ;
+    height: 50%;
+}
+.show_info{
+    background-color:red ;
+    height: 50%;
+}
+#list_breakdown{
+    margin: 0px;
+}

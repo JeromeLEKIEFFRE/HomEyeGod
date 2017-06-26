@@ -47,7 +47,7 @@ include("../../Modele/fonction_gestion_compte.php");
         		adresse:<br/>
         		email:<br/>
         		Numéro de téléphone:<br/>
-                Numéro de téléphone Fixe:    </p>
+                Numéro de téléphone Fixe: </p>
             </aside>
         	<aside>
                 <p> homme<br/>
