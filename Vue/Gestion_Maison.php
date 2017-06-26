@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require ('../Modele/connexion_db.php');
     require ('../Modele/DonneeCapt.php');
     $idMaison=1;
