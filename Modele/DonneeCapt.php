@@ -1,5 +1,5 @@
 <?php
-require ('connexion_db.php');
+require('connexion_db_1.php');
 
 function getDonnee($db,$idCapteur){
     $sql = 'SELECT Datas FROM donnees WHERE idCapteur="'.$idCapteur.'"';

@@ -1,5 +1,5 @@
 <?php
-require("connexion_db.php");
+require("connexion_db_1.php");
 /*$requ=$db->prepare('SELECT MAX (idUtilisateur) FROM utilisateurs');
 $requ->execute();*/
 

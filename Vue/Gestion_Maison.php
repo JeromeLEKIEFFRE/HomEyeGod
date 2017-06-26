@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require ('../Modele/connexion_db.php');
+    require('../Modele/connexion_db_1.php');
     require ('../Modele/DonneeCapt.php');
     $idMaison=1;
     $pieces=listsalles($db,$idMaison);

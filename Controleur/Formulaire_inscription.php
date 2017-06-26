@@ -1,7 +1,7 @@
 <?php
 // Contrôleur pour le formulaire inscription
 include ("../Modele/Verification.php");
-include ("../Modele/connexion_db.php");
+include("../Modele/connexion_db_1.php");
 include ("../Modele/Insertion_BDD.php");
 $email = "test@exemple.com";
 if ($_POST["valider"]

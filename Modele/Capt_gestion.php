@@ -1,6 +1,6 @@
 <?php
 
-require("connexion_db.php");
+require("connexion_db_1.php");
 
 
 function idMaisonprincipale($db,$idUtilisateur){
