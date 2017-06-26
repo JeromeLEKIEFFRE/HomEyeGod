@@ -1,8 +1,16 @@
 <?php
+session_start();
 include ("../Modele/connexion_db.php");
+include ("../Modele/request_session.php");
 
-if ($_POST["username"] != NULL)
-    $username=$_POST["username"];
+if (connexion_check_password($db, $_POST["Nom_utilisateur"])["Mdp"]==$_POST["Mot_de_passe"]){
+    $_SESSION['idUtilisateur']=connexion_check_password($db,$_POST["Nom_utilisateur"])["idUtilisateur"];
+    $_SESSION['Roles']=connexion_check_password($db,$_POST["Nom_utilisateur"])["Roles"];
+     if($_SESSION['Roles']==1){
+         header('');
+     }
+}
+else{
+    echo "Mots de passe incorecte ou de correspond pas au nom d'utilisateur indiqué";
+}
 
-if ($_POST["password"] != NULL)
-    $password=$_POST["password"]

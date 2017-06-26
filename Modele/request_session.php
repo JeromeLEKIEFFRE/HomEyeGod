@@ -8,11 +8,10 @@ function connexion_check_username($db, $username)
     $repf=$rep->fetch();
     return $repf;
 }
-function connexion_check_password($db, $password, $idUtilisateur)
+function connexion_check_password($db, $NomUtilisateur)
 {
-    $sql='SELECT idUtilisateur FROM utilisateurs WHERE idUtiliateur="'.$idUtilisateur.'"';
+    $sql='SELECT Mdp,idUtilisateur,Roles FROM utilisateurs WHERE NomUtilisateur="'.$NomUtilisateur.'"';
     $rep = $db->query($sql);
     $repf=$rep->fetch();
     return $repf;
 }
-function password_verify{}
