@@ -212,7 +212,10 @@ ul li a
     margin-left: 5%;
 }
 
-
+#showdatas ul
+{
+    flex-wrap:wrap;
+}
 
 .code_page p
 {

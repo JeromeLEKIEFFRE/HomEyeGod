@@ -4,6 +4,8 @@
     $idMaison=1;
     $pieces=listsalles($db,$idMaison);
     $capteurs=listetypescapteurs($db,1);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -32,38 +34,38 @@
 
         <div class="showpiece">
             <p>Pièces</p>
-            <!-- récupérer les noms de pièces dans la BD puis ouvrir en js un div correspondant aux données -->
             <ul class="listepiece">
                 <?php
                 foreach($pieces as $row){?>
-                    <li value=<?= $row['idPiece']?> id=><?=$row['Nom']?></li>
+                    <li value="<?= $row['TypeValue']?>" ><?=$row['Nom']?></li>
                 <?php
                 }
                 ?>
-
-
-
-
             </ul>
+            <input id="idpiece" type="hidden" value="">
             <div class="ajout_piece">
                 <p>+ Ajouter une pièce</p>
             </div>
         </div>
 
+
         <div class="showgeneral">
             <h3>Informations capteurs général </h3>
-                <p>Température moyenne :</p>
-                <p>Humidité moyenne : XXX% <!--variable à mettre--></p>
-                <p>Fenêtres ouvertes : X <!--variable à mettre--></p>
-                <p>Chauffages allumés : X <!--variable à mettre--></p>
-                <p>Alarme allumé : Oui <!--Oui ou non--></p>
+            <p>Température moyenne :</p>
+            <p>Humidité moyenne : XXX% <!--variable à mettre--></p>
+            <p>Fenêtres ouvertes : X <!--variable à mettre--></p>
+            <p>Chauffages allumés : X <!--variable à mettre--></p>
+            <p>Alarme allumé : Oui <!--Oui ou non--></p>
             <h3>Alertes et pannes</h3>
-                <p>Capteurs en panne : X</p>
-                <p>Actionneurs en panne : X</p>
+            <p>Capteurs en panne : X</p>
+            <p>Actionneurs en panne : X</p>
             <h3>Programmations</h3>
-                <p>Thermostat X° , commence à XXhXX</p>
-                <p>Chambre de Jimmy, Fenêtre 1, ouverture à XXhXX</p>
-                <p>+ Ajouter une programmation</p>
+            <p>Thermostat X° , commence à XXhXX</p>
+            <p>Chambre de Jimmy, Fenêtre 1, ouverture à XXhXX</p>
+            <p>+ Ajouter une programmation</p>
+        </div>
+        <div id="showdatas" type="hidden">
+
         </div>
         <!-- récupérer les noms de capteurs dans la BD puis ouvrir en js un div correspondant aux données -->
         <div class="showcapt">
@@ -81,5 +83,6 @@
             </div>
         </div>
     </div>
+<script type="texte/javascript" src="Gestion_Maison.js"></script>
 </body>
 </html>
