@@ -37,7 +37,7 @@ function recup_page_name($db){
     foreach ($t as $page) {
         $option .= "<li>" . $page['name_page'] . "</li> <ul>";
 
-    // Texte que l'on peut modifier dans chaque page
+        // Texte que l'on peut modifier dans chaque page
 
         $r = $db->query('SELECT name_text,content_text FROM page WHERE name_page = "' . $page['name_page'] . '"');
         foreach ($r as $name) {
