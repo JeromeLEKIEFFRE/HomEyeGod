@@ -8,10 +8,10 @@
 </head>
 
 <body>
-    <?php
-    include("../../Modele/recup.php");
-    include("../../Modele/connexion.php");
-    ?>
+<?php
+include("../../Modele/recup.php");
+include("../../Modele/connexion.php");
+?>
 <header>
     <h1>
         <a href="home_page.html"><img src="../Bank/logo-accueilDiv2_admin.png" height="15%" width="15%" alt="retour vers l'accueil" /></a>
@@ -19,10 +19,13 @@
 </header>
 <nav>
     <ul id="navigation">
-        <li><a href="gestioncompte.php">Mon Compte</a></li>
-        <li><a href="Gestion_Maison.php">Ma maison</a></li>
-        <li><a href="aide.html">Aide</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="home_page.html">Accueil </a></li>
+        <li><a href="mon_compte.html">Mon Compte</a></li>
+        <li><a href="ma_maison.html">Ma maison</a></li>
+        <li><a href="boutique.html">Boutique</a></li>
+        <li><a href="qui_sommes_nous.html">Qui sommes nous?</a></li>
+        <li><a href="aide_contact.html">Aide/Contact</a></li>
+        <li><a href="admin.html">Administrateur</a></li>
     </ul>
 </nav>
 
@@ -40,15 +43,15 @@
         <div class="list_page">
             <ul>
                 <!--<?php //echo recup_page_name($db)?>-->
-            <?php
-            foreach(recup_page($db) as $row){?>
-                <li> <?php echo $row['name_page']?>  </li>
-                <ul>
-                    <?php foreach (recup_sous_page($db,$row['name_page'])as $under_row){ ?>
-                    <li id="<?php echo $under_row['name_text'] ?>" onclick = "fill_text_area(this.id)"> <?php echo $under_row['name_text']?> </li>
-                    <?php }?>
-                </ul>
-            <?php }?>
+                <?php
+                foreach(recup_page($db) as $row){?>
+                    <li> <?php echo $row['name_page']?>  </li>
+                    <ul>
+                        <?php foreach (recup_sous_page($db,$row['name_page'])as $under_row){ ?>
+                            <li id="<?php echo $under_row['name_text'] ?>" onclick = "fill_text_area(this.id)"> <?php echo $under_row['name_text']?> </li>
+                        <?php }?>
+                    </ul>
+                <?php }?>
             </ul>
         </div>
 
@@ -56,8 +59,8 @@
                 <textarea id="html_code" name="html_code">
 
                 </textarea>
-                <input id = "admin_modif_submit" type="submit" value="Modifier" onclick="modif_text_admin(get_p_name(),get_html_code())">
-                <input id="p_name" type="hidden" name="p_name" value="">
+            <input id = "admin_modif_submit" type="submit" value="Modifier" onclick="modif_text_admin(get_p_name(),get_html_code())">
+            <input id="p_name" type="hidden" name="p_name" value="">
 
 
         </div>
@@ -65,8 +68,8 @@
 
     <section class="rectangle_flex_consult">
         <div class="print_users">
-                <aside><?php echo recup_name($db)[0]?></aside>
-                <aside><?php echo recup_name($db)[1]?></aside>
+            <aside><?php echo recup_name($db)[0]?></aside>
+            <aside><?php echo recup_name($db)[1]?></aside>
         </div>
         <div class="print_breakdown" name="list2">
             <ul id="list_breakdown">
