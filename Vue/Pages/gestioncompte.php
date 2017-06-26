@@ -1,12 +1,9 @@
-
-
 <?php
 session_start();
 $dbname = 'homeyegod';
 $host='localhost';
 $user='root';
 $password='root';
-
 try {
     $bdd = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$password");
 }
@@ -15,7 +12,6 @@ catch (Exception $e)
     die('Erreur : ' . $e->getMessage());
 }
 include("../../Modele/fonction_gestion_compte.php");
-
 ?>
 <head>
     <meta charset="utf-8" />
@@ -24,10 +20,10 @@ include("../../Modele/fonction_gestion_compte.php");
 </head>
     <body>
         <header>
-            <script>show_admin_button(<?php$_SESSION['Role']?>)</script>
+
             <h1><a href="home_page.html"><img src="../" height="15%" width="15%" alt="logo HomEyeGod" /></a></h1>
             <input type="button" value="Admin" id="pop_up_admin">
-
+            <script> show_admin_button("<?php $_SESSION["Roles"] ?>");</script>
         </header>
         <nav>
             <ul id="navigation">

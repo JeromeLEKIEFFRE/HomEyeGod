@@ -20,7 +20,9 @@
 <body>
     <header>
         <h1>
-            <a href="home_page.html"><img src="../Vue/Bank/logo-accueilDiv2.png" height="15%" width="15%" alt="retour vers l'accueil" /></a>
+            <script>show_admin_button(<?php$_SESSION['Role']?>)</script>
+            <h1><a href="home_page.html"><img src="../" height="15%" width="15%" alt="logo HomEyeGod" /></a></h1>
+            <a href="page_admin.php"><input type="button" value="Admin" id="pop_up_admin">
         </h1>
     </header>
     <nav>
