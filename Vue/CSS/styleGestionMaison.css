@@ -45,6 +45,7 @@ nav ul li a
     text-align: center;
     text-decoration: none;
     padding: 1em 2em 1em 2em;
+    color: white;
 }
 
 
@@ -109,12 +110,20 @@ ul li a
 }
 
 /*SHOWPIECE*/
-
-.listepiece li{
+#listepiece{
+    display: none;
+}
+#listepiece li{
     display: list-item;
+    position: relative;
     text-decoration: none;
     margin-bottom: 25%;
     color: White;
+    z-index:1;
+}
+#listepiece .actif{
+    z-index: 10;
+    font-weight: bold;
 }
 
 /*AJOUTPIECE*/
@@ -166,5 +175,9 @@ ul li a
 
 #showdatas ul
 {
+    clear: both;
+    position: relative;
+    z-index: 5;
     flex-wrap:wrap;
 }
+

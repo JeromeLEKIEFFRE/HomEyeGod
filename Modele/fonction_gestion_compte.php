@@ -1,6 +1,5 @@
 <?php
-include ("../../Modele/connexion_db.php");
-require("../../Modele/connexion_db.php");
+require("connexion_db.php");
 function idMail($db,$userMail){
 //Renvoie l'ID de l'utilisateur ayant le mail donné
     $sql = 'SELECT idUtilisateur FROM utilisateurs WHERE Mail = "'.$userMail.'"';
@@ -28,7 +27,5 @@ function infoV($db,$ID){
     $reponse = $db->query($sql);
     $reponsef = $reponse -> fetch();
     return $reponsef;}
-
-
 
 ?>

@@ -21,8 +21,8 @@ function listetypescapteurs($db,$idMaison){
     $reponsefetch = $reponse->fetchAll();
     return $reponsefetch;
 }
-function typescapteurs($db,$idPiece){
-    $sql='SELECT TypeName,Datas  FROM typecapteur JOIN capteurs ON typecapteur.TypeValue=capteurs.Type JOIN donnees ON capteurs.idCapteur=donnees.idCapteur  WHERE idPiece="'.$idPiece.'"';
+function capteurs($db,$idPiece){
+    $sql='SELECT capteurs.idCapteur,typecapteur.TypeName,donnees.Datas FROM typecapteur JOIN capteurs ON typecapteur.TypeValue=capteurs.Type JOIN donnees ON capteurs.idCapteur=donnees.idCapteur WHERE capteurs.idPiece="'.$idPiece.'"';
     $reponse = $db->query($sql);
     $reponsefetch = $reponse->fetchAll();
     return $reponsefetch;
