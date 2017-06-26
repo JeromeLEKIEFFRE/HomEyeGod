@@ -43,7 +43,7 @@ if ($_POST["Mot_de_passe_actuel"]== infoU($db,$_SESSION[idUtilisateur])['Mdp']) 
         $db->exec('UPDATE maisons  SET Voie = "' . $_POST ["Voie"] . '" WHERE $_SESSION[idUtilisateur]');
     }
 
-    header(' ../Vue/gestioncompte.php');
+    header(' ../Vue/Pages/gestioncompte.php');
 }
 else {
     echo "Le mot de passe que vous avez rentrer est incorrect";

@@ -27,16 +27,7 @@ catch (Exception $e)
 <header>
     <h1><a href="home_page.html"><img src="logo-accueil.png" height="15%" width="15%" alt="logo HomEyeGod" /></a></h1>
 </header>
-<nav>
-    <ul id="navigation">
-        <li><a href="home_page.html" alt="logo Home">Accueil <!--<img src="logo_accueil.png" alt="retour vers l'accueil"/></a></li>-->   <!-- ici mettre le logo accueil -->
-        <li><a href="mon_compte.html">Mon Compte</a></li>
-        <li><a href="ma_maison.html">Ma maison</a></li>
-        <li><a href="boutique.html">Boutique</a></li>
-        <li><a href="qui_sommes_nous.html">Qui sommes nous?</a></li>
-        <li><a href="aide_contact.html">Aide/Contact</a></li>
-    </ul>
-</nav>
+
 <section>
     <form action="../../Controleur/formulaire_connexion_Accueil.php" method="post">
         <label for="Nom d'utilisateur"> Nom d'ulisisateur:</label><input type="text" name="Nom_utilisateur" /><br/>

@@ -1,11 +1,7 @@
-<head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="../CSS/style.css" />
-        <title>Créer un compte</title>
-</head>
+
 
 <?php
-
+session_start();
 $dbname = 'homeyegod';
 $host='localhost';
 $user='root';
@@ -18,21 +14,24 @@ catch (Exception $e)
 {
     die('Erreur : ' . $e->getMessage());
 }
-include("../Modele/fonction_gestion_compte.php");
-session_start();
+include("../../Modele/fonction_gestion_compte.php");
+
 ?>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <title>Créer un compte</title>
+</head>
     <body>
         <header>
             <h1><a href="home_page.html"><img src="logo-accueil.png" height="15%" width="15%" alt="logo HomEyeGod" /></a></h1>
         </header>
         <nav>
             <ul id="navigation">
-                <li><a href="home_page.html" alt="logo Home">Accueil <!--<img src="logo_accueil.png" alt="retour vers l'accueil"/></a></li>-->   <!-- ici mettre le logo accueil -->
-                <li><a href="mon_compte.html">Mon Compte</a></li>
-                <li><a href="ma_maison.html">Ma maison</a></li>
-                <li><a href="boutique.html">Boutique</a></li>
-                <li><a href="qui_sommes_nous.html">Qui sommes nous?</a></li>
-                <li><a href="aide_contact.html">Aide/Contact</a></li>
+                <li><a href="gestioncompte.php">Mon Compte</a></li>
+                <li><a href="Gestion_Maison.php">Ma maison</a></li>
+                <li><a href="aide.html">Aide</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
@@ -53,15 +52,15 @@ session_start();
             </aside>
         	<aside>
                 <p> homme<br/>
-                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Nom']?><br/>
-                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Prenom']?><br/>
-                    <?php echo infoU($db,$_SESSION[idUtilisateur])['NomUtilisateur']?><br/>
-                    <?php echo infoM($db,$_SESSION[idUtilisateur])['code_postal']?><br/>
-                    <?php echo infoM($db,$_SESSION[idUtilisateur])['Ville']?><br/>
-                    <?php echo infoM($db,$_SESSION[idUtilisateur])['numero_voie'],' ',infoV($db,$_SESSION[idUtilisateur])['TypeName'],' ',infoM($db,$_SESSION[idUtilisateur])['Voie'] ?><br/>
-                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Mail']?><br/>
-                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Mobile']?><br/>
-                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Numero']?><br/>
+                    <?php echo infoU($db,$_SESSION['idUtilisateur'])['Nom']?><br/>
+                    <?php echo infoU($db,$_SESSION['idUtilisateur'])['Prenom']?><br/>
+                    <?php echo infoU($db,$_SESSION['idUtilisateur'])['NomUtilisateur']?><br/>
+                    <?php echo infoM($db,$_SESSION['idUtilisateur'])['code_postal']?><br/>
+                    <?php echo infoM($db,$_SESSION['idUtilisateur'])['Ville']?><br/>
+                    <?php echo infoM($db,$_SESSION['idUtilisateur'])['numero_voie'],' ',infoV($db,$_SESSION['idUtilisateur'])['TypeName'],' ',infoM($db,$_SESSION['idUtilisateur'])['Voie'] ?><br/>
+                    <?php echo infoU($db,$_SESSION['idUtilisateur'])['Mail']?><br/>
+                    <?php echo infoU($db,$_SESSION['idUtilisateur'])['Mobile']?><br/>
+                    <?php echo infoU($db,$_SESSION['idUtilisateur'])['Numero']?><br/>
                 </p>
         	</aside>
             </div>
@@ -87,7 +86,7 @@ session_start();
             <h1>Saisie du mot de passe actuel pour confirmé</h1>
                     <label for="Mot de passe actuel"> Mot de passe actuel:</label><input type="password" name="Mot_de_passe_actuel" /><br/>
 				<label for="valider"></label><input type="submit" name="valider" />
-                </form>?>
+                </form>
             <aside>
             </aside>
             <article>                
