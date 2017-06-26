@@ -18,8 +18,8 @@
 <section class="connexion_accueil" id="cadre_connexion">
 
     <form action="../Controleur/Formulaire.php" method="post">
-        <label for="Nom d'utilisateur"> Nom d'utilisateur:</label><input type="text" name="Nom_utilisateur" /><br/>
-        <label for="Mot de passe"> Mot de passe:</label><input type="password" name="Mot_de_passe" /><br/>
+        <label for="Nom d'utilisateur"> Nom d'utilisateur:</label><input type="text" name="username" /><br/>
+        <label for="Mot de passe"> Mot de passe:</label><input type="password" name="password" /><br/>
         <label for="valider"></label><input type="submit" name="valider" />
         <p> pas encore de compte?<a href="../Vue/inscription.html"> inscrivez vous!</a></p>
 

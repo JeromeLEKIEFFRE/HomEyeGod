@@ -1,8 +1,13 @@
 <?php
-session_start();
-$_SESSION['Roles'] = $_POST['role'];
-$_SESSION['Nom'] = $_POST['nom'];
-$_SESSION['Prenom'] = $_POST['prenom'];
-$_SESSION['idAdressePrincipale'] = $_POST['idadresseprincipale'];
-$_SESSION['Mail'] = $_POST['mail'];
-$_SESSION['NomUtilisateur'] = $_POST['nomutilisateur'];
+include ("../Modele/connexion_db.php");
+
+function session_connect
+{
+    session_start();
+    $_SESSION['Roles'] = $role;
+    $_SESSION['Nom'] = $nom;
+    $_SESSION['Prenom'] = $prenom;
+    $_SESSION['idAdressePrincipale'] = $idadress;
+    $_SESSION['Mail'] = $mail;
+    $_SESSION['NomUtilisateur'] = $username;
+}
