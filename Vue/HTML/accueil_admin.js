@@ -61,10 +61,43 @@ function fill_text_area(str) {
                 console.log(xmlhttp.responseText);
             }
         }
-        xmlhttp.open("GET", "../../Modele/fill_text.php?text=" + str, true);
+        xmlhttp.open("GET", "../../Controleur/fill_text.php?text=" + str, true);
         xmlhttp.send();
     }
+document.ready(
+function modif_text_admin(str,cont) {
+    document.getElementById("store_text").submit(function modif_text_admin(str, cont) {
+        if (str == "") {
+            document.getElementById("admin_modif_submit").value = "";
+            return;
+        }
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            if (window.ActiveXObject)
+                try {
+                    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (e) {
+                    try {
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (e) {
+                        return NULL;
+                    }
+                }
+        }
 
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("html_code").value = cont;
+                document.getElementById("p_name").value = str;
+                console.log(xmlhttp.responseText);
+            }
+        }
+
+        xmlhttp.open("GET", "../../Controleur/submit_modif.php?text=" + str + "cont=" + cont, true);
+        xmlhttp.send();
+    })
+})
 
 function get_name(id){
     return document.getElementById("html_code").name

@@ -61,3 +61,8 @@ function submit_modif($db,$selected_text,$content_text){
     // 'UPDATE page SET content_text="" WHERE name_text= "\"; CREATE TABLE gmail(ID INT NOT NULL);";'
 }
 
+function recup_text($db,$selected_text){
+    $r = $db->query('SELECT content_text FROM page WHERE name_text ="'.$selected_text.'"');
+    $rf=$r->fetch();
+    return $rf;
+}

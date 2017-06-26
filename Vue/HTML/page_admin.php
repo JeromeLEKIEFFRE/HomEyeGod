@@ -55,11 +55,11 @@
         </div>
 
         <div class="page_code">
-            <form action="../../Controleur/Controleur.php" method="POST" class="store_text">
+            <form action="modif_text_admin(html_code.value, p_name.value)" method="GET" id="store_text">
                 <textarea id="html_code" name="html_code">
 
                 </textarea>
-                <input type="submit" value="Modifier">
+                <input id = "admin_modif_submit" type="submit" value="Modifier">
                 <input id="p_name" type="hidden" name="p_name" value="">
             </form>
 

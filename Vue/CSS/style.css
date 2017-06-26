@@ -217,10 +217,10 @@ aside
     font-size: 20px;
 
 }
-.store_text {
+#store_text {
     width:100%;
 }
-.store_text input{
+#store_text input{
     height:10%;
     width: 20%;
 }
