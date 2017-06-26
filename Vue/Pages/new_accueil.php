@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style_new_accueil.css" />
+    <link rel="stylesheet" href="../CSS/style_new_accueil.css" />
     <title>GerHome</title>
 </head>
 

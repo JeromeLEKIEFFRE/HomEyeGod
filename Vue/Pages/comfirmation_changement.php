@@ -3,13 +3,13 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../CSS/style.css" />
         <title>Créer un compte</title>
     </head>
 
     <body>
         <header>
-            <h1><a href="home_page.html"><img src="logo-accueilDiv2.png"  alt="logo HomEyeGod" /></a></h1>
+            <h1><a href="home_page.html"><img src="../Bank/logo-accueilDiv2.png" alt="logo HomEyeGod" /></a></h1>
         </header>
 
         <nav>

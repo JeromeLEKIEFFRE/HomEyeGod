@@ -1,6 +1,6 @@
 <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="../CSS/style.css" />
         <title>Créer un compte</title>
 </head>
 
@@ -18,7 +18,7 @@ catch (Exception $e)
 {
     die('Erreur : ' . $e->getMessage());
 }
-include ("../Modele/fonction_gestion_compte.php");
+include("../Modele/fonction_gestion_compte.php");
 session_start();
 ?>
     <body>
@@ -66,7 +66,7 @@ session_start();
         	</aside>
             </div>
         	<h1>Changer données personnelles</h1>
-                <form action="../Controleur/controleur_gestion.php" method="post">
+                <form action="../../Controleur/controleur_gestion.php" method="post">
         		<label for="Nom d'utilisateur"> Nom d'utilisateur:</label><input type="text" name="Nom_utilisateur" /><br/>
 				<label for="Mot de passe"> Mot de passe:</label><input type="password" name="Mot_de_passe" /><br/>
                 <label for="Confirmer le mot de passe"> Confimer le mot de passe:</label><input type="password"  name="confirmer"/> <br/>

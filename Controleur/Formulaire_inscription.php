@@ -87,7 +87,7 @@ if ($_POST["valider"] //vérification des champs
     //newIdUtilisateur($db);
     //newHome($db, idUtilisateur($db,$_POST["Nom_utilisateur"]),$_POST["Ville"], NULL, $_POST["Numero_de_telephone"], NULL, NULL, $_POST["Code_Postal"]);
     //insertNewUser($db, $_POST["Nom_utilisateur"], $_POST["Mot_de_passe"], NULL, NULL, NULL, $_POST["Numero_de_telephone"], NULL);
-    //header('Location: ../HTML/compte_cree.html');
+    //header('Location: ../Pages/compte_cree.html');
     exit;
 }
 

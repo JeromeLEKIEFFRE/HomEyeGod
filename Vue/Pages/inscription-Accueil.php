@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style_connexion_accueil.css" />
+    <link rel="stylesheet" href="../CSS/style_connexion_accueil.css" />
     <title>Créer un compte</title>
 </head>
 
 <body>
 <header>
-    <h1><a href="home_page.html"><img src="Images/logo_HEG.png" alt="logo GerHome" /></a></h1>
+    <h1><a href="home_page.html"><img src="../Images/logo_HEG.png" alt="logo GerHome" /></a></h1>
 </header>
 
 <nav>
