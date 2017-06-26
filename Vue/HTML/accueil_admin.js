@@ -80,14 +80,11 @@ function modif_text_admin(str,cont) {
                 }
         }
 
-        xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        // {"n_modified": 1}, JSON.parse(xhttp.responseTxt).n_modified;
+        // query.php?var0=value_var0&var1=value_var1
+        xmlhttp.open("GET", "../../Controleur/submit_modif.php?text=" + str + "&cont=" +cont, true);
+        xmlhttp.send();
 
-            }
-        }
-
-        xmlhttp.open("GET", "../../Controleur/submit_modif.php?text=" + str + "?cont=" +cont, true);
-        xmlhttp.send(xmlhttp.responseText);
     }
 
 function get_html_code(){

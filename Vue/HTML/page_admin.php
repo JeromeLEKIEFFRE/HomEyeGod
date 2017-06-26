@@ -68,12 +68,13 @@
 
     <section class="rectangle_flex_consult">
         <div class="print_users">
-            <ul class="print_users" name="list">
+            <h4> Liste des utilisateurs</h4>
+            <ul id="list_users" name="list">
                 <?php echo recup_name($db)?>
             </ul>
         </div>
-        <div class="print_users" name="list2">
-            <ul class="print_users">
+        <div class="print_breakdown" name="list2">
+            <ul id="list_breakdown">
                 <?php echo recup_all_broken_capt($db)?>
             </ul>
         </div>
