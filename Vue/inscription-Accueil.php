@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_connexion_accueil.css" />
     <title>Créer un compte</title>
 </head>
 

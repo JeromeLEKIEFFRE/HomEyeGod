@@ -1,9 +1,9 @@
 <?php
 //comment
 // Contrôleur pour le formulaire inscription
-include ("../Modele/Verification.php");
-include("../Modele/connexion_db_1.php");
-include ("../Modele/Insertion_BDD.php");
+include("../Modele/Verification_Accueil.php");
+include ("../Modele/connexion_db.php");
+include("../Modele/Insertion_BDD_Accueil.php");
 
 //email="test@exemple.com";
 //affectation des données du formulaires en variables php

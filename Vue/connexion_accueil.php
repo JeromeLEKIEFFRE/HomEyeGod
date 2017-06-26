@@ -6,7 +6,7 @@ $_SESSION['Roles']="";
 ?>
 <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style_connexion_accueil.css" />
         <title>Créer un compte</title>
 </head>
 
@@ -38,7 +38,7 @@ catch (Exception $e)
     </ul>
 </nav>
 <section>
-    <form action="../Controleur/formulaire_connexion.php" method="post">
+    <form action="../Controleur/formulaire_connexion_Accueil.php" method="post">
         <label for="Nom d'utilisateur"> Nom d'ulisisateur:</label><input type="text" name="Nom_utilisateur" /><br/>
         <label for="Mot de passe"> Mots de passe:</label><input type="password" name="Mot_de_passe" /><br/>
         <label for="valider"></label><input type="submit" name="valider" />
