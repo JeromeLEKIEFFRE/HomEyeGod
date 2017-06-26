@@ -32,12 +32,28 @@
             <label for="Nom d'utilisateur"> Nom d'utilisateur:</label><input type="text" name="username" /><br/>
             <label for="Mot de passe"> Mot de passe:</label><input type="password" name="mdp" /><br/>
             <label for="Confirmer le mot de passe"> Confimer le mot de passe:</label><input type="password"  name="confirm_mdp"/> <br/>
-            <label for="Adresse"> Adresse:</label><input type="text" name="adresse"/><br/>
-            <label for="Code postal"> Code postal:</label><input type="int" range="5" name="code_postal"/><br/>
+            <label for="Type de voie">Type de voie:</label>
+            <SELECT name="type_voie" size="1">
+                <OPTION>Rue</OPTION>
+                <option>Avenue</option>
+                <option>Boulevard</option>
+                <option>Impasse</option>
+                <option>Chemin</option>
+                <option>Voie</option>
+                <option>Quai</option>
+                <option>Allé</option>
+                <option>Berge</option>
+                <option>Lieu dit</option>
+                <option>Place</option>
+            </SELECT><br/>
+            <label for="Numéro de voie">Numéro de voie:</label><input type="int" name="numero_voie"/><br/>
+            <label for="Voie">Voie:</label><input type="text" name="voie"/><br/>
+            <label for="Code postal"> Code postal:</label><input type="int" name="code_postal"/><br/>
             <label for="Ville"> Ville:</label><input type="text" name="ville"/><br/>
             <label for="email"> email:</label><input type="email" name="email"/><br/>
             <label for="Numéro de téléphone"> Numéro de téléphone:</label><input type="tel" name="numero_tel"/><br/>
             <label for="Numéro de téléphone fixe"> Numéro de téléphone fixe:</label><input type="tel" name="numero_tel_fixe"/><br/>
+
             <label for="valider"></label><input type="submit" name="valider" id="boutton_submit"/>
 
         </form>
@@ -47,17 +63,8 @@
     </div>
 </section>
 
-<footer>
-
-</footer>
-
+<script type="text/javascript src="controle_form.js"></script>
 </body>
 </html>
 
 <?php
-/**
- * Created by PhpStorm.
- * User: eliot
- * Date: 19/06/2017
- * Time: 10:17
- */

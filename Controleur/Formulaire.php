@@ -19,10 +19,10 @@ else
 if ($_POST["sexe"] != NULL)
 $sexe= $_POST["sexe"];
 else
-    echo "erreur sexe"
+    echo "erreur sexe";
 
-if ($_POST["username"]!=NULL)
-$username=       $_POST["username"];
+if ($_POST["username"]!= NULL)
+$username= $_POST["username"];
 else
     echo "erreur username";
 
@@ -35,12 +35,6 @@ if ($_POST["confirm_mdp"]!=NULL)
 $confirm_mdp=$_POST["confirm_mdp"];
 else
     echo "erreur confirm mdp";
-
-
-if ($_POST["adresse"]!=NULL)
-$adresse=        $_POST["adresse"];
-else
-    echo"erreur";
 
 if  ($_POST["code_postal"]!=NULL)
 $code_postal=    $_POST["code_postal"];
@@ -63,6 +57,15 @@ $numero_tel=     $_POST["numero_tel"];
 $numero_tel_fixe=$_POST["numero_tel_fixe"];}
 else
     echo"erreur tel";
+
+if ($_POST["type_voie"] !=NULL)
+$type_voie=$_POST["type_voie"];
+
+if ($_POST["voie"] !=NULL)
+$voie=$_POST["voie"];
+
+if ($_POST["numero_voie"] !=NULL)
+$numero_voie=$_POST["numero_voie"];
 
 if ($_POST["valider"] //vérification des champs
     AND $nom !=NULL
