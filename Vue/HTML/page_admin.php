@@ -3,7 +3,7 @@ session_start();
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/style_admin.css" />
     <title>Page Administrateur</title>
 </head>
 
