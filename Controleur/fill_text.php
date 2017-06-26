@@ -1,5 +1,5 @@
 <?php
-include('connexion.php');
+include('../Modele/connexion.php');
 include('../Modele/recup.php');
 
 $selected_text = $_GET["text"];
