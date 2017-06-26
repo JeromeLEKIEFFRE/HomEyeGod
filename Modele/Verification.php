@@ -11,17 +11,17 @@ function idUtilisateur($db,$username){
 }
 
 
-function idMail($db,$userMail){
+function idMail($db,$email){
 //Renvoie l'ID de l'utilisateur ayant le mail donné
-    $sql = 'SELECT idUtilisateur FROM utilisateurs WHERE Mail = "'.$userMail.'"';
+    $sql = 'SELECT idUtilisateur FROM utilisateurs WHERE Mail = "'.$email.'"';
     $reponse = $db->query($sql);
     return $reponse;
 }
 
 
-function idNum($db,$userNum){
+function idNum($db,$numero_tel){
 //Renvoie l'ID de l'utilisateur ayant le numéro de téléphone donné
-    $sql = 'SELECT idUtilisateur FROM utilisateurs WHERE Numero = "'.$userNum.'" OR Mobile = "'.$userNum.'"';
+    $sql = 'SELECT idUtilisateur FROM utilisateurs WHERE Numero = "'.$userNum.'" OR Mobile = "'.$numero_tel.'"';
     $reponse = $db->query($sql);
     return $reponse;
 }

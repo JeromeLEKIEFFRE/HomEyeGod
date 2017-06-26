@@ -33,9 +33,4 @@
 </body>
 </html>
 
-<?php /**
- * Created by PhpStorm.
- * User: eliot
- * Date: 02/06/2017
- * Time: 10:38
- */
+<?php

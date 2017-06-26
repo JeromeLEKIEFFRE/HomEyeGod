@@ -1,5 +1,5 @@
 <?php
-	$dbname = 'GerHome';
+	$dbname = 'gerhome';
 	$host='localhost';
 	$user='root';
 	$password='root';
