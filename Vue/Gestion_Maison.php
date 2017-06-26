@@ -12,7 +12,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleGestionMaison.css" />
     <title>Gestion de ma maison</title>
 </head>
 
