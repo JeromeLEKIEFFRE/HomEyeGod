@@ -33,6 +33,7 @@ function modifLongueur(page) {
 }
 
 function fill_text_area(str) {
+
     if (str == "") {
         document.getElementById("html_code").value = "";
         return;
@@ -52,23 +53,20 @@ function fill_text_area(str) {
             }
     }
 
-        xmlhttp.onreadystatechange = function ()
-        {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-            {
-                document.getElementById("html_code").value = xmlhttp.responseText;
-                document.getElementById("p_name").value = str;
-                console.log(xmlhttp.responseText);
-            }
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            document.getElementById("html_code").value = xmlhttp.responseText;
+            document.getElementById("p_name").value = str;
+            console.log(xmlhttp.responseText);
         }
-        xmlhttp.open("GET", "../../Controleur/fill_text.php?text=" + str, true);
-        xmlhttp.send();
     }
+    xmlhttp.open("GET", "../../Controleur/fill_text.php?text=" + str, true);
+    xmlhttp.send();
+}
 
 function modif_text_admin(str,cont) {
 
         if (str == "") {
-            document.getElementById("admin_modif_submit").value = "";
             return;
         }
         if (window.XMLHttpRequest) {
@@ -88,18 +86,18 @@ function modif_text_admin(str,cont) {
 
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("html_code").value = xmlhttp.responseText ;
-                document.getElementById("p_name").value = str;
-                console.log(xmlhttp.responseText);
             }
         }
 
-        xmlhttp.open("GET", "../../Controleur/submit_modif.php?text=" + str + "?cont=" + cont, true);
+        xmlhttp.open("GET", "../../Controleur/submit_modif.php?text=" + str + "../../Controleur/submit_modif.php?cont=" +cont, true);
         xmlhttp.send();
     }
 
-function get_name(id){
-    return document.getElementById("html_code").name
+function get_html_code(){
+    return document.getElementById("html_code").value;
+}
+function get_p_name() {
+    return document.getElementById("p_name").value;
 }
 
 

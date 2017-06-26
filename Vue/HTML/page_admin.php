@@ -1,3 +1,4 @@
+session_start();
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -59,7 +60,7 @@
                 <textarea id="html_code" name="html_code">
 
                 </textarea>
-                <input id = "admin_modif_submit" type="submit" value="Modifier" onclick="modif_text_admin(html_code.value,p_name.value)">
+                <input id = "admin_modif_submit" type="submit" value="Modifier" onclick="modif_text_admin(get_p_name(),get_html_code())">
                 <input id="p_name" type="hidden" name="p_name" value="">
             </form>
 
