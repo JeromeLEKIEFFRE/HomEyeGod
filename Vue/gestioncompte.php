@@ -10,6 +10,7 @@ $dbname = 'homeyegod';
 $host='localhost';
 $user='root';
 $password='root';
+
 try {
     $bdd = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$password");
 }
@@ -18,6 +19,7 @@ catch (Exception $e)
     die('Erreur : ' . $e->getMessage());
 }
 include ("../Modele/fonction_gestion_compte.php");
+session_start();
 ?>
     <body>
         <header>
@@ -51,22 +53,18 @@ include ("../Modele/fonction_gestion_compte.php");
             </aside>
         	<aside>
                 <p> homme<br/>
-                    <?php echo infoU($db,1)['Nom']?><br/>
-                    <?php echo infoU($db,1)['Prenom']?><br/>
-                    <?php echo infoU($db,1)['NomUtilisateur']?><br/>
-                    <?php echo infoM($db,1)['code_postal']?><br/>
-                    <?php echo infoM($db,1)['Ville']?><br/>
-                    <?php echo infoM($db,1)['numero_voie'],' ',infoV($db,1)['TypeName'],' ',infoM($db,1)['Voie'] ?><br/>
-                    <?php echo infoU($db,1)['Mail']?><br/>
-                    <?php echo infoU($db,1)['Mobile']?><br/>
-                    <?php echo infoU($db,1)['Numero']?><br/>
+                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Nom']?><br/>
+                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Prenom']?><br/>
+                    <?php echo infoU($db,$_SESSION[idUtilisateur])['NomUtilisateur']?><br/>
+                    <?php echo infoM($db,$_SESSION[idUtilisateur])['code_postal']?><br/>
+                    <?php echo infoM($db,$_SESSION[idUtilisateur])['Ville']?><br/>
+                    <?php echo infoM($db,$_SESSION[idUtilisateur])['numero_voie'],' ',infoV($db,$_SESSION[idUtilisateur])['TypeName'],' ',infoM($db,$_SESSION[idUtilisateur])['Voie'] ?><br/>
+                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Mail']?><br/>
+                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Mobile']?><br/>
+                    <?php echo infoU($db,$_SESSION[idUtilisateur])['Numero']?><br/>
                 </p>
         	</aside>
             </div>
-            <?php
-            $Type1 = $bdd->query('SELECT * FROM typevoie');
-            $Type = $Type1 -> fetchAll();
-            ?>
         	<h1>Changer données personnelles</h1>
                 <form action="../Controleur/controleur_gestion.php" method="post">
         		<label for="Nom d'utilisateur"> Nom d'utilisateur:</label><input type="text" name="Nom_utilisateur" /><br/>
