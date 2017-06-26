@@ -1,4 +1,5 @@
 <?php
+//comment
 // Contrôleur pour le formulaire inscription
 include ("../Modele/Verification.php");
 include ("../Modele/connexion_db.php");
