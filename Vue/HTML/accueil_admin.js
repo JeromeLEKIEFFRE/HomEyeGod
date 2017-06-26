@@ -57,7 +57,6 @@ function fill_text_area(str) {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             document.getElementById("html_code").value = xmlhttp.responseText;
             document.getElementById("p_name").value = str;
-            console.log(xmlhttp.responseText);
         }
     }
     xmlhttp.open("GET", "../../Controleur/fill_text.php?text=" + str, true);
@@ -65,10 +64,7 @@ function fill_text_area(str) {
 }
 
 function modif_text_admin(str,cont) {
-
-        if (str == "") {
-            return;
-        }
+    console.log(cont);
         if (window.XMLHttpRequest) {
             xmlhttp = new XMLHttpRequest();
         } else {
@@ -86,11 +82,12 @@ function modif_text_admin(str,cont) {
 
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
             }
         }
 
-        xmlhttp.open("GET", "../../Controleur/submit_modif.php?text=" + str + "../../Controleur/submit_modif.php?cont=" +cont, true);
-        xmlhttp.send();
+        xmlhttp.open("GET", "../../Controleur/submit_modif.php?text=" + str + "?cont=" +cont, true);
+        xmlhttp.send(xmlhttp.responseText);
     }
 
 function get_html_code(){

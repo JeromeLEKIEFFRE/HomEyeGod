@@ -1,4 +1,4 @@
-session_start();
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,7 +14,7 @@ session_start();
     ?>
 <header>
     <h1>
-        <a href="home_page.html"><img src="../BANK/logo-accueilDiv2.png" height="15%" width="15%" alt="retour vers l'accueil" /></a>
+        <a href="home_page.html"><img src="../BANK/logo-accueilDiv2_admin.png" height="15%" width="15%" alt="retour vers l'accueil" /></a>
     </h1>
 </header>
 <nav>
@@ -56,13 +56,12 @@ session_start();
         </div>
 
         <div class="page_code">
-            <form action="" method="GET" id="store_text">
                 <textarea id="html_code" name="html_code">
 
                 </textarea>
                 <input id = "admin_modif_submit" type="submit" value="Modifier" onclick="modif_text_admin(get_p_name(),get_html_code())">
                 <input id="p_name" type="hidden" name="p_name" value="">
-            </form>
+
 
         </div>
     </section>
