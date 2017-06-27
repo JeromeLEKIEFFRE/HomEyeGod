@@ -13,36 +13,18 @@
     <meta charset="UTF-8" />
     <title>Gestion de ma maison</title>
     <link rel="stylesheet" href="../CSS/styleGestionMaison.css" />
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript" src="../JS/Gestion_Maison.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>
-            <script>show_admin_button(<?php$_SESSION['Role']?>)</script>
-            <h1><a href="home_page.html"><img src="../" height="15%" width="15%" alt="logo HomEyeGod" /></a></h1>
-            <a href="page_admin.php"><input type="button" value="Admin" id="pop_up_admin">
-        </h1>
-    </header>
-    <nav>
-        <ul id="navigation">
-            <li><a href="gestioncompte.php">Mon Compte</a></li>
-            <li><a href="Gestion_Maison.php">Ma maison</a></li>
-            <li><a href="FAQ.php">Aide</a></li>
-        </ul>
-    </nav>
-
+    <?php include"bandeau.php"?>
     <div class="gestion_capt">
         <div class="showpiece">
             <p>Pièces</p>
             <ul class="listepiece">
                 <?php
                 foreach($pieces as $row){?>
-                    <li value="<?= $row['TypeValue']?>" ><?=$row['Nom']?></li>
-                <?php
-                }
-                ?>
+                    <li><?=$row['Nom']?></li>
+                    <?php } ?>
             </ul>
             <div class="ajout_piece">
                 <p>+ Ajouter une pièce</p>
@@ -65,20 +47,18 @@
                 <p>Chambre de Jimmy, Fenêtre 1, ouverture à XXhXX</p>
                 <p>+ Ajouter une programmation</p>
             </div>
-
             <div id="showdatas">
                 <?php
                 foreach($pieces as $row){?>
-                <div class="piece">
-                    <H2><?=$row['Nom']?></H2>
-                    <?php foreach(capteurs($db,$row['idPiece']) as $row2){?>
-                    <div class="doncapt">
-                        <h3><?=$row2['TypeName']?></h3>
-                        <h4><?=$row2['idCapteur']?></h4>
-                        <h5><?=$row2['Datas']?></h5>
+                    <div class="piece">
+                        <H2><?=$row['Nom']?></H2>
+                        <?php foreach(capteurs($db,$row['idPiece']) as $row2){?>
+                            <div class="doncapt">
+                                <h3><?=$row2['TypeName']?> : </h3>
+                                <h4><?=$row2['Datas']?></h4>
+                            </div>
+                        <?php } ?>
                     </div>
-                    <?php } ?>
-                </div>
                 <?php } ?>
             </div>
 
@@ -89,7 +69,7 @@
                 <?php
                 foreach($capteurs as $row){?>
                     <li value=<?= $row['TypeValue']?>><?=$row['TypeName']?></li>
-                    <?php } ?>
+                <?php } ?>
             </ul>
             <div class="ajout_capt">
                 <p>+ Ajouter un capteur</p>
