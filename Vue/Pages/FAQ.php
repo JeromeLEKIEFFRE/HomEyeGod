@@ -14,9 +14,9 @@
 <nav>
     <ul id="navigation">
         <!-- prendre sur Bandeau.html -->
-        <li><a href="mon_compte.html">Mon Compte</a></li>
-        <li><a href="ma_maison.html">Ma maison</a></li>
-        <li><a href="aide.html">Aide</a></li>
+        <li><a href="gestioncompte.php">Mon Compte</a></li>
+        <li><a href="Gestion_Maison.php">Ma maison</a></li>
+        <li><a href="FAQ.php">Aide</a></li>
     </ul>
 </nav>
 

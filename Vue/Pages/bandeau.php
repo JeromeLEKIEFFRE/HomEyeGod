@@ -20,7 +20,7 @@
         <ul id="navigation">
             <li><a href="gestioncompte.php">Mon Compte</a></li>
             <li><a href="Gestion_Maison.php">Ma maison</a></li>
-            <li><a href="aide.html">Aide</a></li>
+            <li><a href="FAQ.php">Aide</a></li>
         </ul>
     </nav>
 
