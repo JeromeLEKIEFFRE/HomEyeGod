@@ -3,8 +3,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../CSS/style_admin.css" />
     <title>Page Administrateur</title>
+    <link rel="stylesheet" href="../CSS/style_admin.css" />
 </head>
 
 <body>
@@ -13,6 +13,7 @@ include("../../Modele/recup.php");
 include("../../Modele/connexion.php");
 include ("bandeau.php");
 ?>
+<link rel="stylesheet" href="../CSS/style_admin.css" />
 
 <section class="rectangle_flex_encadre">
     <section class="rectangle_flex_acc">

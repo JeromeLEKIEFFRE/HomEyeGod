@@ -237,6 +237,7 @@ aside
     display: flex;
     text-align: center;
     margin-left: 0px;
+    color:white;
 }
 h4{
     text-align: center;
@@ -244,6 +245,7 @@ h4{
 }
 #list_users{
     list-style-type: none;
+    color:white;
 }
 table{
     justify-content: space-around;
@@ -267,7 +269,7 @@ table{
     background-color:orange ;
 }
 .print_breakdown{
-    background-color:green ;
+    background-color:lightblue ;
     height: 50%;
 }
 .show_info{

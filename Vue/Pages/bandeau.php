@@ -9,7 +9,7 @@
             <h1><a href="gestioncompte.php"><img src="../Bank/logo_HomiCare.png" height="70%"  alt="../Images/logo_HEC.png" /></a></h1>
             <div id="bouton_bandeau">
             <?php if ($_SESSION['Roles']==2 || $_SESSION['Roles']==3) { ?>
-    <input href="page_admin.php" type=<?="button"?> value=Admin> </input>
+                <a href="page_admin.php"><input  type=<?="button"?> value=Admin </a> </input>
 
 
 <?php }?>

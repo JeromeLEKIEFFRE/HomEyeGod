@@ -19,7 +19,6 @@ if (connexion_check_password($db, $_POST["Nom_utilisateur"])["Mdp"]==$_POST["Mot
         exist();
     }
 }
-
 else{
     echo "Mots de passe incorecte ou de correspond pas au nom d'utilisateur indiqué";
 }
