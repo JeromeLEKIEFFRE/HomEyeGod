@@ -22,6 +22,7 @@ include ("bandeau.php");
         <div class ="consult_admin" onclick="modifLongueur('consult')">
             <p class="consult_admin">Consultation</p>
         </div>
+        <script type="text/javascript" src="../JS/accueil_admin.js"></script>
     </section>
 
     <section class="rectangle_flex_modif">
@@ -49,6 +50,7 @@ include ("bandeau.php");
 
 
         </div>
+        <script type="text/javascript" src="../JS/accueil_admin.js"></script>
     </section>
 
     <section class="rectangle_flex_consult">
@@ -63,14 +65,16 @@ include ("bandeau.php");
                 </ul>
             </div>
             <div id="show_info">
-
+                <script type="text/javascript" src="../JS/accueil_admin.js"></script>
             </div>
         </div>
         <div id="print_capteur">
 
         </div>
+        <script type="text/javascript" src="../JS/accueil_admin.js"></script>
     </section>
+    <script type="text/javascript" src="../JS/accueil_admin.js"></script>
 </section>
-<script type="text/javascript" src="accueil_admin.js"></script>
+<script type="text/javascript" src="../JS/accueil_admin.js"></script>
 </body>
 </html>
