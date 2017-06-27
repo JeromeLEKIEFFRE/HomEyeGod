@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,19 +8,7 @@
 </head>
 
 <body>
-<header>
-    <h1><a href="home_page.html"><img src="logo-accueilDiv2.png"  alt="logo HomEyeGod" /></a></h1>
-</header>
-
-<nav>
-    <ul id="navigation">
-        <!-- prendre sur Bandeau.html -->
-        <li><a href="gestioncompte.php">Mon Compte</a></li>
-        <li><a href="Gestion_Maison.php">Ma maison</a></li>
-        <li><a href="FAQ.php">Aide</a></li>
-    </ul>
-</nav>
-
+<?php include 'bandeau.php'?>
 <h2>Besoin d'aide ?</h2>
 <section>
 
