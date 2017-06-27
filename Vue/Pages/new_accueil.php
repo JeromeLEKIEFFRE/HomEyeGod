@@ -24,7 +24,7 @@
         <p> pas encore de compte?<a href="../Vue/inscription.html"> inscrivez vous!</a></p>
 
     </form>
-    <script type="text/javascript" src="../JS/Erreur_connexion.js"></script>
+    <script type="text/javascript" src="../JS/Erreur_accueil_connexion.js"></script>
 </section>
 
 </body>
