@@ -40,9 +40,9 @@ $_SESSION['Roles']="";
         <label for="Nom d'utilisateur"> Nom d'ulisisateur:</label><input type="text" name="Nom_utilisateur" /><br/>
         <label for="Mot de passe"> Mots de passe:</label><input type="password" name="Mot_de_passe" /><br/>
         <label for="valider"></label><input type="submit" name="valider" />
-    </form>
-    <script type="text/javascript" src="../JS/Erreur_accueil_connexion.js"></script>
-</section>
+    </form><br/>
 
+</section>
+<p> pas encore de compte?<a href="inscription_accueil.php"> inscrivez vous!</a></p>
 </body>
 </html>
