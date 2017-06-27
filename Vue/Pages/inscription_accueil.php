@@ -7,9 +7,9 @@
 </head>
 
 <body>
-    <?php
-    include "bandeau.php";
-    ?>
+<header>
+
+</header>
 <h2>Créez votre compte HomEyeGod</h2>
 <section class="section_inscription">
     <div><!-- on rentre les informations dans des cases -->

@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../CSS/style_new_accueil.css" />
-    <title>GerHome</title>
+    <title>HomiCare</title>
 </head>
 
 <body>
-<header>
-    <h1><a href="../Vue/home_page.html"><img src="../Vue/Images/logo-accueilDiv2.png" alt="logo GerHome" /></a></h1>
-</header>
 <div class="titre_page">
-    <h1>GerHome</h1>
+<p><img src="../Images/logo_HEG.png" alt="logo HomiCare" /></p>
+</div>
+<div class="titre_page">
+    <h1>Bienvenue sur HomiCare</h1>
 </div>
 
 

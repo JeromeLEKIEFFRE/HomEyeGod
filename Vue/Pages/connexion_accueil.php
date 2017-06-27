@@ -4,11 +4,20 @@ $_SESSION['idUtilisateur']="";
 $_SESSION['Roles']="";
 
 ?>
+<!DOCTYPE html>
+<html>
 <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="../CSS/style_connexion_accueil.css" />
-        <title>Créer un compte</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../CSS/style_new_accueil.css" />
+    <title>HomiCare</title>
 </head>
+
+<body>
+<div class="titre_page">
+    <p><img src="../Images/logo_HEG.png" alt="logo HomiCare" /></p>
+</div>
+<div class="titre_page">
+    <h1>Bienvenue sur HomiCare</h1>
 
 <?php
 $dbname = 'homeyegod';
@@ -24,10 +33,6 @@ catch (Exception $e)
 }
 ?>
 <body>
-<header>
-    <h1><a href="home_page.html"><img src="logo-accueil.png" height="15%" width="15%" alt="logo HomEyeGod" /></a></h1>
-</header>
-
 <section>
     <form action="../../Controleur/formulaire_connexion_Accueil.php" method="post">
         <label for="Nom d'utilisateur"> Nom d'ulisisateur:</label><input type="text" name="Nom_utilisateur" /><br/>
