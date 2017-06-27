@@ -62,6 +62,36 @@ function fill_text_area(str) {
     xmlhttp.open("GET", "../../Controleur/fill_text.php?text=" + str, true);
     xmlhttp.send();
 }
+function fill_div_info(str) {
+
+    if (str == "") {
+        document.getElementById("show_info").innerHTML = "";
+        return;
+    }
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        if (window.ActiveXObject)
+            try {
+                xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                try {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                } catch (e) {
+                    return NULL;
+                }
+            }
+    }
+
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            document.getElementById("show_info").innerHTML = xmlhttp.responseText;
+            document.getElementById("var_user").value = str;
+        }
+    }
+    xmlhttp.open("GET", "../../Controleur/fill_text.php?text=" + str, true);
+    xmlhttp.send();
+}
 
 function modif_text_admin(str,cont) {
     console.log(cont);

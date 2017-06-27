@@ -74,7 +74,7 @@ include("../../Modele/connexion.php");
                 </ul>
             </div>
             <div class="show_info">
-
+                <input type="hidden" id="var_user" value="">
             </div>
         </div>
         <div class="print_capteur">

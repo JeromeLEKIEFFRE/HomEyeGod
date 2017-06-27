@@ -252,7 +252,6 @@ table{
     text-align: center;
 }
 .rectangle_flex_consult {
-    display: flex;
     flex-wrap: nowrap;
 }
 .info {
