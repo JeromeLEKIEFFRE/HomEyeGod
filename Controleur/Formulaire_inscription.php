@@ -113,12 +113,13 @@ if ($_POST["valider"] //vérification des champs
 
     insertNewUser($db,$username,$mdp,$nom,$prenom,$idMaison,$numero_tel,$numero_tel_fixe,$email,$type_user);
 
-    $idUtilisateur=idUtilisateur($db,$username);
-
+    $idUtilisateur= verify($db)['idUtilisateur'];
+echo $idUtilisateur;
+echo $idMaison;
     updateUserId($db,$idUtilisateur,$idMaison);
 
-    echo (verify($db)['Nom']);
-    
+    echo (verify($db)['idUtilisateur']);
+
 
     //header('Location: ../Pages/compte_cree.html');
     exit;
