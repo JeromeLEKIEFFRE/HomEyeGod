@@ -19,19 +19,9 @@ include("../../Modele/fonction_gestion_compte.php");
     <title>Créer un compte</title>
 </head>
     <body>
-        <header>
-
-            <h1><a href="home_page.html"><img src="../" height="15%" width="15%" alt="logo HomEyeGod" /></a></h1>
-            <input type="button" value="Admin" id="pop_up_admin">
-            <script> show_admin_button("<?php $_SESSION["Roles"] ?>");</script>
-        </header>
-        <nav>
-            <ul id="navigation">
-                <li><a href="gestioncompte.php">Mon Compte</a></li>
-                <li><a href="Gestion_Maison.php">Ma maison</a></li>
-                <li><a href="aide.html">Aide</a></li>
-            </ul>
-        </nav>
+        <?php
+        include "bandeau.php";
+        ?>
 
         <section>
         	<h1>Données personnelles</h1>

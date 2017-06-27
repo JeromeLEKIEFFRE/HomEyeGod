@@ -82,7 +82,5 @@ include("../../Modele/connexion.php");
         </div>
     </section>
 </section>
-
-<script type="text/javascript" src="accueil_admin.js"></script>
 </body>
 </html>

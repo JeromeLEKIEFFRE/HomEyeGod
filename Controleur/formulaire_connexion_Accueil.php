@@ -13,6 +13,10 @@ if (connexion_check_password($db, $_POST["Nom_utilisateur"])["Mdp"]==$_POST["Mot
          header('Location: ../Vue/Pages/page_admin.php');
          exist();
      }
+     if($_SESSION['Roles']==3){
+        header('Location: ../Vue/Pages/page_admin.php');
+        exist();
+    }
 }
 else{
     echo "Mots de passe incorecte ou de correspond pas au nom d'utilisateur indiqué";
