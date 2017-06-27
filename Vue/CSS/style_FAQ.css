@@ -7,45 +7,13 @@ body{
     padding:auto;
 }
 
-header
-{
-    color: #4c74a1;
-    margin-left: 20px;
-    height: 20%;
-}
+
 
 p, h1
 {
     color: #4c74a1;
 }
 
-nav
-{
-    background-color: #4c74a1;
-    margin-left: auto;
-}
-
-nav ul
-{
-    display: table;
-    width: auto;
-    margin: 10px auto;
-    padding: auto;
-}
-
-nav ul li
-{
-    display: table-cell;
-}
-
-nav ul li a
-{
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    padding: 1em 2em 1em 2em;
-    color: white;
-}
 
 
 ul
@@ -113,4 +81,3 @@ p{
     text-align:center;
     margin-top:11%;
 }
-
