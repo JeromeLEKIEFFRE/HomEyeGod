@@ -10,7 +10,7 @@ function connexion_check_username($db, $username)
 }
 function connexion_check_password($db, $NomUtilisateur)
 {
-    $sql='SELECT Mdp,idUtilisateur,Roles, FROM utilisateurs WHERE NomUtilisateur="'.$NomUtilisateur.'"';
+    $sql='SELECT Mdp,idUtilisateur,Roles FROM utilisateurs WHERE NomUtilisateur="'.$NomUtilisateur.'"';
     $rep = $db->query($sql);
     $repf=$rep->fetch();
     return $repf;
