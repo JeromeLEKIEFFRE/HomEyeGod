@@ -12,7 +12,7 @@ function recup_all_broken_capt($db){
     $option="";
     $r = $db->query($sql);
     foreach ($r as $row)
-        $option.="<li>". $row["NomUtilisateur"]." ".$row["Nom"]." ".$row["TypeName"]."</li>";
+        $option.="<li>". $row["NomUtilisateur"].",capteur en panne de type ".$row["TypeName"].", dans la pièce ".$row["Nom_piece"].", contact:".$row['Mail']. "</li>";
     return $option;
 }
 function recup_name($db){
@@ -71,4 +71,17 @@ function recup_text($db,$selected_text){
     $r = $db->query('SELECT content_text FROM page WHERE name_text ="'.$selected_text.'"');
     $rf=$r->fetch();
     return $rf;
+}
+
+function recup_user_info($db,$id){
+    $r = $db->query('SELECT * FROM utilisateurs  JOIN maisons ON maisons.idUtilisateur = utilisateurs.idUtilisateur JOIN typevoie ON maisons.TypeVoie = typecapteur.TypeValue WHERE utilisateurs.idUtilisateur ="'.$id.'"');
+    $option="<div class='user_content'> Informations";
+    $option2="<div class='house_content'> Maison(s)";
+    foreach ($r as $row){
+        $option.= "Nom d'utilisateur : ".$row['NomUtilisateur']."</br>"."Nom : ".$row['Nom']."</br>"."Prénom : ".$row['Prenom']."</br>"."Adresse E-Mail : ".$row['Mail']."</br>"."Numéro de téléphone".$row['Numero']."</br>";
+        $option2 .= "Adresse : ".$row['numero_voie']." ".$row['TypeName']." ".$row['Voie'].", ".$row['code_postal'].", ".$row['Ville'];
+    }
+    $option.="</div>";
+    $option2.="</div>";
+    return array($option,$option2);
 }
