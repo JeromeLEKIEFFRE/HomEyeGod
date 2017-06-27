@@ -1,32 +1,45 @@
+<?php
+session_start();
+$_SESSION['idUtilisateur']="";
+$_SESSION['Roles']="";
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../CSS/style_connexion_accueil.css" />
-    <title>Créer un compte</title>
+    <link rel="stylesheet" href="../CSS/style_new_accueil.css" />
+    <title>HomiCare</title>
 </head>
 
 <body>
-<header>
-    <h1><a href="home_page.html"><img src="../Images/logo_HEG.png" alt="logo GerHome" /></a></h1>
-</header>
+<div class="titre_page">
+    <p><img src="../Images/logo_HEG.png" alt="logo HomiCare" /></p>
+</div>
+<div class="titre_page">
+    <h1>Félicitation!</h1>
 
-<nav>
-    <ul id="navigation">
-        <li><a href="home_page.html" alt="logo Home">Accueil <!--<img src="logo_accueil.png" alt="retour vers l'accueil"/></a></li>-->   <!-- ici mettre le logo accueil -->
-        <li><a href="mon_compte.html">Mon Compte</a></li>
-        <li><a href="ma_maison.html">Ma maison</a></li>
-        <li><a href="boutique.html">Boutique</a></li>
-        <li><a href="qui_sommes_nous.html">Qui sommes nous?</a></li>
-        <li><a href="aide_contact.html">Aide/Contact</a></li>
-    </ul>
-</nav>
-<h2>Félicitation!</h2>
+    <?php
+    $dbname = 'homeyegod';
+    $host='localhost';
+    $user='root';
+    $password='root';
+    try {
+        $bdd = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$password");
+    }
+    catch (Exception $e)
+    {
+        die('Erreur : ' . $e->getMessage());
+    }
+    ?>
+</div>
+<body>
 <section>
-    <p>Vous avez bien créé votre compte, cliquez sur Ma maison pour débuter votre expérience</p>
+    <p>Vous avez bien créé votre compte, connectez-vous pour débuter votre expérience</p>
 </section>
-
-</body>
-</html>
-
-<?php
+<section>
+    <form action="../../Controleur/formulaire_connexion_Accueil.php" method="post">
+        <label for="Nom d'utilisateur"> Nom d'ulisisateur:</label><input type="text" name="Nom_utilisateur" /><br/>
+        <label for="Mot de passe"> Mots de passe:</label><input type="password" name="Mot_de_passe" /><br/>
+        <label for="valider"></label><input type="submit" name="valider" />
+</section>
