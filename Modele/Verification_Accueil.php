@@ -56,6 +56,14 @@ function verify($db)
     $repf=$rep->fetch();
     return $repf;
 }
+function verifyHome($db)
+{
+    $sql='SELECT Voie FROM maisons WHERE idMaison=(SELECT MAX(idMaison) FROM maisons)';
+    $rep = $db->query($sql);
+    $repf=$rep->fetch();
+    return $repf;
+}
+
 function typevoie($db,$type_voie)
 {
     $sql='SELECT TypeValue FROM typevoie WHERE TypeName="'.$type_voie.'"';
@@ -64,6 +72,14 @@ function typevoie($db,$type_voie)
     return $repf;
     $sql=$db->query('SELECT TypeValue FROM typevoie WHERE TypeName = "'.$type_voie.'"');
     return $sql['TypeValue'];
+}
+
+function idNewMaison($db)
+{
+    $sql='SELECT idMaison FROM maisons WHERE idMaison=(SELECT MAX(idMaison) FROM maisons)';
+    $rep = $db->query($sql);
+    $repf=$rep->fetch();
+    return $repf['idMaison'];
 }
 
 ?>

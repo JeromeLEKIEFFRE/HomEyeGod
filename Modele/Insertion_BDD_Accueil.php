@@ -8,6 +8,7 @@ $requ->execute();*/
 function insertNewUser($db, $username, $mdp, $nom, $prenom, $idMaison, $numero_tel, $numero_tel_fixe, $email, $type_user){
     // Créer un nouvel utilisateur /!\ à faire après avoir crée la maison avec les input de la demande d'adresse qui sera celui de la maison 'principale'
     $sql ='INSERT INTO utilisateurs () VALUES (NULL, "'.$type_user.'","'.$nom.'","'.$prenom.'","'.$idMaison.'","'.$numero_tel_fixe.'","'.$numero_tel.'","'.$email.'","'.$username.'","'.$mdp.'")';
+
     $db->exec($sql);
 }
 
@@ -18,11 +19,18 @@ function newIdUtilisateur($db){
     return $reponse+1;
 }
 
-function newHome($db,$idUtilisateur,$ville,$type_voie,$numero_voie,$voie,$pays,$codepostal,$superficie,$nombrepiece,$nombrepersonne){
+function newHome($db,$ville,$type_voie,$numero_voie,$voie,$pays,$codepostal,$superficie,$nombrepiece,$nombrepersonne){
     // Création d'une maison  et retourne l'idMaison correspondant
-    $sql ='INSERT INTO maisons VALUES (NULL,"'.$idUtilisateur.'","'.$type_voie.'","'.$numero_voie.'","'.$voie.'","'.$codepostal.'","'.$ville.'","'.$pays.'","'.$superficie.'","'.$nombrepiece.'","'.$nombrepersonne.'")';
+    //$sql ='INSERT INTO maisons VALUES (NULL,"'.$idUtilisateur.'","'.$numero_voie.'","'.$type_voie.'","'.$voie.'","'.$codepostal.'","'.$ville.'","'.$pays.'","'.$superficie.'","'.$nombrepiece.'","'.$nombrepersonne.'")';
+    $sql ='INSERT INTO maisons (`idUtilisateur`,`numero_voie`, `TypeVoie`, `Voie`, `code_postal`, `Ville`, `Pays`, `Superficie`, `Nombre_Pieces`, `Nbre_Pers`)
+          VALUES(1,"'.$numero_voie.'","'.$type_voie.'","'.$voie.'","'.$codepostal.'","'.$ville.'","'.$pays.'","'.$superficie.'","'.$nombrepiece.'","'.$nombrepersonne.'")';
     $db->exec($sql);
 
+}
+function updateUserId($db,$idUtilisateur,$idMaison)
+{
+    $sql='UPDATE maisons SET idUtilisateur="'.$idUtilisateur.'" WHERE idMaison="'.$idMaison.'"';
+    $db->exec($sql);
 }
 
 function idHome($db,$idUtilisateur){

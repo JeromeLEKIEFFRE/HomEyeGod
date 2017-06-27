@@ -84,7 +84,7 @@ $numero_voie=$_POST["numero_voie"];
 else
     echo "erreur numéro voie";
 
-$idMaison=1;
+
 $type_user=1;
 $superficie=1;
 $nombrepiece=1;
@@ -105,13 +105,20 @@ if ($_POST["valider"] //vérification des champs
     AND idMail($db, $email)->rowcount()==NULL //vérification présence du mail dans bdd
     AND $_POST["numero_tel"]!=NULL ){
 
-    insertNewUser($db,$username,$mdp,$nom,$prenom,$idMaison,$numero_tel,$numero_tel_fixe,$email,$type_user);
+    newHome($db,$ville,$type_voie,$numero_voie,$voie,$pays,$code_postal,$superficie,$nombrepiece,$nombrepersonne);
 
-    echo (verify($db)['Nom']);
+    echo (verifyHome($db)['Voie']);
+
+    $idMaison=idNewMaison($db);
+
+    insertNewUser($db,$username,$mdp,$nom,$prenom,$idMaison,$numero_tel,$numero_tel_fixe,$email,$type_user);
 
     $idUtilisateur=idUtilisateur($db,$username);
 
-    newHome($db,$idUtilisateur,$ville,$type_voie,$numero_voie,$voie,$pays,$code_postal,$superficie,$nombrepiece,$nombrepersonne);
+    updateUserId($db,$idUtilisateur,$idMaison);
+
+    echo (verify($db)['Nom']);
+    
 
     //header('Location: ../Pages/compte_cree.html');
     exit;
