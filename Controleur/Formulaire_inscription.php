@@ -53,11 +53,16 @@ $email=          $_POST["email"];
 else
     echo"erreur mail vide";
 
-if ($_POST["numero_tel"]!=NULL){
-$numero_tel=     $_POST["numero_tel"];
-$numero_tel_fixe=$_POST["numero_tel_fixe"];}
+if ($_POST["numero_tel"]!=NULL)
+$numero_tel=$_POST["numero_tel"];
 else
     echo"erreur tel";
+
+if ($_POST["numero_tel_fixe"]!=NULL)
+$numero_tel_fixe=$_POST["numero_tel_fixe"];
+else
+    echo"erreur tel fixe";
+
 
 if ($_POST["type_voie"] !=NULL)
 $type_voie=$_POST["type_voie"];
@@ -67,7 +72,7 @@ $voie=$_POST["voie"];
 
 if ($_POST["numero_voie"] !=NULL)
 $numero_voie=$_POST["numero_voie"];
-
+$idMaison=1;
 if ($_POST["valider"] //vérification des champs
     AND $nom !=NULL
     AND $prenom !=NULL
@@ -82,7 +87,7 @@ if ($_POST["valider"] //vérification des champs
     AND filter_var($email, FILTER_VALIDATE_EMAIL) //email valide?
     AND idMail($db, $email)->rowcount()==NULL //vérification présence du mail dans bdd
     AND $_POST["numero_tel"]!=NULL ){
-    insertNewUser($db,$username,$mdp,$nom,$prenom,$numero_tel,$numero_tel_fixe,$email);
+    insertNewUser($db,$username,$mdp,$nom,$prenom,$idMaison,$numero_tel,$numero_tel_fixe,$email);
     echo (verify($db)['Nom']);
     //newIdUtilisateur($db);
     //newHome($db, idUtilisateur($db,$_POST["Nom_utilisateur"]),$_POST["Ville"], NULL, $_POST["Numero_de_telephone"], NULL, NULL, $_POST["Code_Postal"]);

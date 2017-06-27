@@ -49,4 +49,12 @@ function get_first_name ($db,$username){
     $r= $db->query('SELECT Prenom FROM utilisateurs WHERE idUtilisateur="'.$username.'"');
     return $r['Prenom'];
 }
+function verify($db)
+{
+    $sql='SELECT Nom FROM utilisateurs WHERE idUtilisateur=(SELECT MAX(idUtilisateur) FROM utilisateurs)';
+    $rep = $db->query($sql);
+    $repf=$rep->fetch();
+    return $repf;
+}
+
 ?>

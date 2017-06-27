@@ -4,17 +4,10 @@ require("connexion_db_1.php");
 $requ->execute();*/
 
 
-function insertNewUser($db,$username,$mdp,$nom,$prenom,$idMaison,$numero,$mobile){
+function insertNewUser($db,$username,$mdp,$nom,$prenom,$idMaison,$numero_tel,$numero_tel_fixe,$email){
     // Créer un nouvel utilisateur /!\ à faire après avoir crée la maison avec les input de la demande d'adresse qui sera celui de la maison 'principale'
-    $sql ='INSERT INTO Utilisateur ()VALUES (1,"'.$nom.'","'.$prenom.'","'.$idMaison.'","'.$numero.'","'.$mobile.'","'.$username.'","'.$mdp.'")';
+    $sql ='INSERT INTO Utilisateur ()VALUES (1,"'.$nom.'","'.$prenom.'","'.$idMaison.'","'.$numero_tel_fixe.'","'.$numero_tel.'","'.$email.'","'.$username.'","'.$mdp.'")';
     $db->exec($sql);
-}
-INSERT INTO `utilisateurs` (`idUtilisateur`, `Rôles`, `Nom`, `Prénom`, `idAdressePrincipale`, `Numero`, `Mobile`, `Mail`, `NomUtilisateur`, `Mdp`)
-        VALUES (NULL,1,"'.$nom.'","'.$prenom.'","'.$idMaison.'","'.$numero.'","'.$mobile.'", "'.$username.'", "'.password_hash("$password",PASSWORD_BCRYPT).'");
-function add_user($db,$login,$password){
-    //ajout user crypté
-    $requ=$db->prepare('INSERT INTO Utilisateur (NomUtilisateur,Mdp) VALUES ("'.$login.'","'.password_hash("$password",PASSWORD_BCRYPT).'")');
-    $requ->execute();
 }
 
 function newIdUtilisateur($db){
@@ -38,8 +31,3 @@ function idHome($db,$idUtilisateur){
     return $reponse;
 }
 ?>
-function add_user($db,$login,$password){
-
-$requ=$db->prepare('INSERT INTO Utilisateur (NomUtilisateur,Mdp) VALUES ("'.$login.'","'.password_hash("$password",PASSWORD_BCRYPT).'")');
-$requ->execute();
-}
