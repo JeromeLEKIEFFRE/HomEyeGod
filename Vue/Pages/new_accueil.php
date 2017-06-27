@@ -21,7 +21,7 @@
         <label for="Nom d'utilisateur"> Nom d'utilisateur:</label><input type="text" name="username" /><br/>
         <label for="Mot de passe"> Mot de passe:</label><input type="password" name="password" /><br/>
         <label for="valider"></label><input type="submit" name="valider" />
-        <p> pas encore de compte?<a href="../Vue/inscription.html"> inscrivez vous!</a></p>
+        <p> pas encore de compte?<a href="inscription_accueil.php"> inscrivez vous!</a></p>
 
     </form>
     <script type="text/javascript" src="../JS/Erreur_accueil_connexion.js"></script>
