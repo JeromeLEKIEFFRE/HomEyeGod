@@ -1,5 +1,5 @@
 <?php
-//comment
+
 // Contrôleur pour le formulaire inscription
 include("../Modele/Verification_Accueil.php");
 include ("../Modele/connexion_db.php");
@@ -36,6 +36,8 @@ if ($_POST["confirm_mdp"]!=NULL)
 $confirm_mdp=$_POST["confirm_mdp"];
 else
     echo "erreur confirm mdp";
+if (!password_verify($confirm_mdp,$mdp))
+    echo "erreur verif mdp";
 
 if  ($_POST["code_postal"]!=NULL)
 $code_postal=    $_POST["code_postal"];
@@ -72,7 +74,9 @@ $voie=$_POST["voie"];
 
 if ($_POST["numero_voie"] !=NULL)
 $numero_voie=$_POST["numero_voie"];
+
 $idMaison=1;
+
 if ($_POST["valider"] //vérification des champs
     AND $nom !=NULL
     AND $prenom !=NULL
