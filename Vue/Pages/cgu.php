@@ -2,23 +2,23 @@
 
 <html>
 
-    <head>
+<head>
 
-        <meta charset="utf-8" />
+    <meta charset="utf-8" />
 
-        <title>CGU</title>
+    <title>CGU</title>
 
-    </head>
+</head>
 
 
-    <body>
+<body>
 
-        <h1>CONDITIONS GÉNÉRALES D’UTILISATION DE HOMEYECARE</h1>
+<h1>CONDITIONS GÉNÉRALES D’UTILISATION DE HOMEYECARE</h1>
 
 <br/><br/>
 <p>L’utilisateur de la plateforme HomEyeCare est invité à prendre connaissance des conditions générales d’utilisation avant de finaliser la création de son compte et de connecter son domicile.</p>
 <br/>
-<h2>ARTICLE 1 : CHAMP D’APPLICATION</h2> 
+<h2>ARTICLE 1 : CHAMP D’APPLICATION</h2>
 <br/>
 <p>Les présentes Conditions générales d’utilisation s’appliquent, sans restriction ni réserve à toute souscription et utilisation de services liés à l’offre HomEyeCare proposés par DOMISEP aux consommateurs et non-professionnels sur le site Internet d’HomEyeCare. Le non-professionnel étant toute personne morale qui agit à des fins qui n'entrent pas dans le cadre de son activité commerciale, industrielle, artisanale, libérale ou agricole.</p>
 <br/>
@@ -29,20 +29,20 @@
 <h2>ARTICLE 3 : DESCRIPTION DU SERVICE</h2>
 <br/>
 <p>Le service HomEyeCare permet après souscription, d’équiper son domicile en capteurs et caméras connectés puis de piloter son domicile depuis la plateforme en ligne. Le client peut s’être préalablement équipé de tout matériel de domotique connecté, pris ensuite en charge par le service HomEyeCare.
-Le Client s’engage à utiliser le Service, notamment le contenu numérique auquel il donne accès, de manière responsable et non-frauduleuse.
-Le client qui souscrit au service HomEyeCare devra s’assurer préalablement qu’il possède les prérequis suivants :
-Un domicile en France métropolitaine 
-Un accès internet haut débit
-Un routeur disposant d’une connexion ethernet et/ou Wifi
-Le Service HomEyeCare est accessible 24/24 heures et 7/7 jours dans la limite des conditions d’accès et d’usage. Toutefois, le Prestataire peut être amené à optimiser les modalités d’accès au Service HomEyeCare et son usage dans l’intérêt même du Client et des Utilisateurs. Le Prestataire s’engage à ce qu’il n’en résulte ni augmentation des prix, ni altération de qualité, ni modification substantielle des fonctionnalités. À ce titre, le Client accepte toute évolution technique et/ou technologique apportée au Service. Cette évolution ne saurait être considérée, par le Client, comme un motif légitime de résiliation du Contrat. Le Prestataire se réserve le droit de suspendre ou limiter l'accès au Service HomEyeCare en cas d'interventions techniques ou d'opérations de maintenance ainsi qu’en cas de risque pour la sécurité du Service ou d’utilisation frauduleuse de celui-ci afin de protéger les intérêts du Client. Le Prestataire peut alors procéder de plein droit et sans préavis à la suspension ou à la limitation d'accès au Service après en avoir avisé préalablement le Client, par tout moyen. La mise en œuvre de la suspension ou limitation d'accès au Service relève le Prestataire de son obligation de fournir le Service souscrit pour toute la durée de cette suspension ou limitation et ne donne droit à aucune indemnité au bénéfice du Client. La responsabilité du Prestataire ne saurait être engagée à raison des éventuelles conséquences dommageables de la suspension ou limitation d'accès au Service sur les activités du Client.</p>
+    Le Client s’engage à utiliser le Service, notamment le contenu numérique auquel il donne accès, de manière responsable et non-frauduleuse.
+    Le client qui souscrit au service HomEyeCare devra s’assurer préalablement qu’il possède les prérequis suivants :
+    Un domicile en France métropolitaine
+    Un accès internet haut débit
+    Un routeur disposant d’une connexion ethernet et/ou Wifi
+    Le Service HomEyeCare est accessible 24/24 heures et 7/7 jours dans la limite des conditions d’accès et d’usage. Toutefois, le Prestataire peut être amené à optimiser les modalités d’accès au Service HomEyeCare et son usage dans l’intérêt même du Client et des Utilisateurs. Le Prestataire s’engage à ce qu’il n’en résulte ni augmentation des prix, ni altération de qualité, ni modification substantielle des fonctionnalités. À ce titre, le Client accepte toute évolution technique et/ou technologique apportée au Service. Cette évolution ne saurait être considérée, par le Client, comme un motif légitime de résiliation du Contrat. Le Prestataire se réserve le droit de suspendre ou limiter l'accès au Service HomEyeCare en cas d'interventions techniques ou d'opérations de maintenance ainsi qu’en cas de risque pour la sécurité du Service ou d’utilisation frauduleuse de celui-ci afin de protéger les intérêts du Client. Le Prestataire peut alors procéder de plein droit et sans préavis à la suspension ou à la limitation d'accès au Service après en avoir avisé préalablement le Client, par tout moyen. La mise en œuvre de la suspension ou limitation d'accès au Service relève le Prestataire de son obligation de fournir le Service souscrit pour toute la durée de cette suspension ou limitation et ne donne droit à aucune indemnité au bénéfice du Client. La responsabilité du Prestataire ne saurait être engagée à raison des éventuelles conséquences dommageables de la suspension ou limitation d'accès au Service sur les activités du Client.</p>
 <p>Les fonctionnalités du service accessibles au client sur la plateforme en ligne HomEyeCare sont les suivantes :</p>
 <ul><li>Possibilité de prise de rendez-vous pour installer du matériel</li>
-<li>Accès en continu aux informations de tous les capteurs et caméras équipés</li>
-<li>Ajout ou suppression de nouvel appareil ou équipement</li>
-<li>Programmation et déprogrammation à distance du chauffage, d’ouverture de fenêtres et de portes</li>
-<li>Accès aux statistiques liées aux informations des capteurs</li>
-<li>Programmations et déprogrammation d’alertes et d’alarmes</li>
-<li>Accès à la FAQ et au service client</li></ul>
+    <li>Accès en continu aux informations de tous les capteurs et caméras équipés</li>
+    <li>Ajout ou suppression de nouvel appareil ou équipement</li>
+    <li>Programmation et déprogrammation à distance du chauffage, d’ouverture de fenêtres et de portes</li>
+    <li>Accès aux statistiques liées aux informations des capteurs</li>
+    <li>Programmations et déprogrammation d’alertes et d’alarmes</li>
+    <li>Accès à la FAQ et au service client</li></ul>
 <br/>
 <h2>ARTICLE 4 : SOUSCRIPTION</h2>
 <br/>
@@ -54,12 +54,12 @@ Le Service HomEyeCare est accessible 24/24 heures et 7/7 jours dans la limite de
 
 <br/>
 <p>Le Client peut obtenir la résiliation de son engagement avant l’expiration du Contrat en cas de survenance de l’un des évènements imprévus suivants :<p>
-	<ul>
- <li>Le déménagement du Client en dehors de la France métropolitaine. Le Client doit pouvoir en justifier par la production de deux documents pertinents (factures d’électricité, téléphone, etc.). Un déménagement en France métropolitaine ne saurait constituer un motif légitime de résiliation.</li>
- <li>Le décès du Client. Les héritiers ou ayants droits du Client doivent pouvoir justifier de leur intérêt à agir par la production de tout document pertinent (copie de l’acte de décès par exemple).</li>
- <li>Le cas de force majeure. Le Client doit également pouvoir en justifier par la production d’un document pertinent. En cas de doute sur le justificatif présenté, le Prestataire pourra demander tout justificatif supplémentaire lui semblant utile avant de donner suite à la demande de résiliation anticipée
-En cas de doute sur le justificatif présenté, le Prestataire pourra demander tout justificatif supplémentaire lui semblant utile avant de donner suite à la demande de résiliation anticipée.
-La résiliation anticipée peut être demandée à l’aide de toute déclaration écrite, dénuée d’ambiguïté, exprimant la volonté du Client de résilier son engagement, et notamment par un courrier postal adressé à l’adresse indiquée sur la plateforme HomEyeCare.</li></ul>
+<ul>
+    <li>Le déménagement du Client en dehors de la France métropolitaine. Le Client doit pouvoir en justifier par la production de deux documents pertinents (factures d’électricité, téléphone, etc.). Un déménagement en France métropolitaine ne saurait constituer un motif légitime de résiliation.</li>
+    <li>Le décès du Client. Les héritiers ou ayants droits du Client doivent pouvoir justifier de leur intérêt à agir par la production de tout document pertinent (copie de l’acte de décès par exemple).</li>
+    <li>Le cas de force majeure. Le Client doit également pouvoir en justifier par la production d’un document pertinent. En cas de doute sur le justificatif présenté, le Prestataire pourra demander tout justificatif supplémentaire lui semblant utile avant de donner suite à la demande de résiliation anticipée
+        En cas de doute sur le justificatif présenté, le Prestataire pourra demander tout justificatif supplémentaire lui semblant utile avant de donner suite à la demande de résiliation anticipée.
+        La résiliation anticipée peut être demandée à l’aide de toute déclaration écrite, dénuée d’ambiguïté, exprimant la volonté du Client de résilier son engagement, et notamment par un courrier postal adressé à l’adresse indiquée sur la plateforme HomEyeCare.</li></ul>
 <br/>
 <h2>ARTICLE 6 – RESPONSABILITÉ DU PRESTATAIRE – GARANTIE LÉGALE</h2>
 <br/>
@@ -73,7 +73,7 @@ La résiliation anticipée peut être demandée à l’aide de toute déclaratio
 <h2>ARTICLE 8 – PROPRIÉTÉ INTELLECTUELLE </h2>
 <br/>
 <p>Le contenu du site Internet du Prestataire est la propriété du Prestataire et est protégé par les lois françaises et internationales relatives à la propriété intellectuelle. Toute reproduction totale ou partielle de ce contenu est strictement interdite et est susceptible de constituer un délit de contrefaçon. En outre, le Prestataire reste propriétaire de tous les droits de propriété intellectuelle sur les photographies, présentations, études, dessins, modèles, prototypes, etc., réalisés (même à la demande du Client) en vue de la fourniture du Service au Client. Le Client s’interdit donc toute reproduction ou exploitation desdites études, dessins, modèles et prototypes, etc., sans l’autorisation expresse, écrite et préalable du Prestataire qui peut la conditionner à une contrepartie financière.<p>
-<br/>
+    <br/>
 <h2>ARTICLE 9 – DROIT APPLICABLE – LANGUE</h2>
 <br/>
 <p>Les présentes Conditions générales et les opérations qui en découlent sont régies et soumises au droit français. Les présentes Conditions générales sont rédigées en langue française. Dans le cas où elles seraient traduites en une ou plusieurs langues étrangères, seul le texte français ferait foi en cas de litige.</p>
@@ -82,14 +82,15 @@ La résiliation anticipée peut être demandée à l’aide de toute déclaratio
 <br/>
 <p>Le Client reconnait ainsi avoir eu communication, préalablement à la conclusion du Contrat, d’une manière lisible et compréhensible, des présentes Conditions générales et notamment les informations suivantes :</p>
 <ul>
-<li>les caractéristiques essentielles du Service</li>
-<li>les modalités de souscription</li>
-<li>la date ou le délai auquel le Prestataire s'engage à fournir le Service souscrit</li>
-<li>les fonctionnalités du contenu numérique </li>
-<li>les informations relatives au droit de rétractation (existence, conditions, délai, modalités d’exercice et formulaire type de rétractation), aux modalités de résiliation et autres conditions contractuelles importantes</li>
-<li>les informations relatives à la législation applicable et à la juridiction compétente en cas de litige</li>
-<li>les informations relatives à l’identité du Prestataire, à ses coordonnées postales, téléphoniques et électroniques et à ses activités, si elles ne ressortent pas du contexte.</li>
-<p>Le fait pour un consommateur ou un non-professionnel, de souscrire via la plateforme HomEyeCare implique l’adhésion et acceptation pleine et entière des présentes Conditions générales et obligation au paiement du Service souscrit, ce qui est expressément reconnu par le Client, qui renonce, notamment, à se prévaloir de tout document contradictoire, qui serait inopposable au Prestataire.</p>
-    </body>
+    <li>les caractéristiques essentielles du Service</li>
+    <li>les modalités de souscription</li>
+    <li>la date ou le délai auquel le Prestataire s'engage à fournir le Service souscrit</li>
+    <li>les fonctionnalités du contenu numérique </li>
+    <li>les informations relatives au droit de rétractation (existence, conditions, délai, modalités d’exercice et formulaire type de rétractation), aux modalités de résiliation et autres conditions contractuelles importantes</li>
+    <li>les informations relatives à la législation applicable et à la juridiction compétente en cas de litige</li>
+    <li>les informations relatives à l’identité du Prestataire, à ses coordonnées postales, téléphoniques et électroniques et à ses activités, si elles ne ressortent pas du contexte.</li>
+    <p>Le fait pour un consommateur ou un non-professionnel, de souscrire via la plateforme HomEyeCare implique l’adhésion et acceptation pleine et entière des présentes Conditions générales et obligation au paiement du Service souscrit, ce qui est expressément reconnu par le Client, qui renonce, notamment, à se prévaloir de tout document contradictoire, qui serait inopposable au Prestataire.</p>
+</body>
 
 </html>
+<?php
