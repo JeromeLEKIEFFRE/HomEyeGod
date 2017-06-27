@@ -51,7 +51,7 @@ function get_first_name ($db,$username){
 }
 function verify($db)
 {
-    $sql='SELECT Nom FROM utilisateurs WHERE idUtilisateur=(SELECT MAX(idUtilisateur) FROM utilisateurs)';
+    $sql='SELECT idUtilisateur FROM utilisateurs WHERE idUtilisateur=(SELECT MAX(idUtilisateur) FROM utilisateurs)';
     $rep = $db->query($sql);
     $repf=$rep->fetch();
     return $repf;
