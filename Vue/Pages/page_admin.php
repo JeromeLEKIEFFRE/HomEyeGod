@@ -11,19 +11,8 @@
 <?php
 include("../../Modele/recup.php");
 include("../../Modele/connexion.php");
+include ("bandeau.php");
 ?>
-<header>
-    <h1>
-        <a href="home_page.html"><img src="../Bank/logo-accueilDiv2_admin.png" height="15%" width="15%" alt="retour vers l'accueil" /></a>
-    </h1>
-</header>
-<nav>
-    <ul id="navigation">
-        <li><a href="gestioncompte.php">Mon Compte</a></li>
-        <li><a href="Gestion_Maison.php">Ma maison</a></li>
-        <li><a href="aide.html">Aide</a></li>
-    </ul>
-</nav>
 
 <section class="rectangle_flex_encadre">
     <section class="rectangle_flex_acc">
@@ -73,14 +62,15 @@ include("../../Modele/connexion.php");
                     <?php echo recup_all_broken_capt($db)?>
                 </ul>
             </div>
-            <div class="show_info">
-                <input type="hidden" id="var_user" value="">
+            <div id="show_info">
+
             </div>
         </div>
-        <div class="print_capteur">
+        <div id="print_capteur">
 
         </div>
     </section>
 </section>
+<script type="text/javascript" src="accueil_admin.js"></script>
 </body>
 </html>
