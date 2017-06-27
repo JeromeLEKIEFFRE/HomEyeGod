@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['NomUtilisateur']="";
 $_SESSION['idUtilisateur']="";
 $_SESSION['Roles']="";
 

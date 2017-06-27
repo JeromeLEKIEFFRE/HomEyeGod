@@ -238,6 +238,7 @@ aside
 }
 #bouton_bandeau
 {
-	display: flex;
-	align-content: flex-end;
+	display: block;
+	margin-right: 0;
+	text-align: right;
 }

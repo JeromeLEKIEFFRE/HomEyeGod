@@ -84,5 +84,4 @@ include("../../Modele/fonction_gestion_compte.php");
         <footer>
             
         </footer>
-        <script type="text/javascript" src="../JS/admin_bouton.js"></script>
     </body>
