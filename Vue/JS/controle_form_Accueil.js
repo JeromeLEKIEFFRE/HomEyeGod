@@ -1,4 +1,4 @@
-function Afficher_erreur(){
+function Afficher_erreur_inscription(){
     var a = document.forms["form_inscription"]["nom"].value;
     var b = document.forms["form_inscription"]["prenom"].value;
     var c = document.forms["form_inscription"]["sexe"].value;

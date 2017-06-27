@@ -17,16 +17,16 @@
 
 <section class="connexion_accueil" id="cadre_connexion">
 
-    <form action="../Controleur/Formulaire.php" method="post">
+    <form id="form_connexion" action="../../Controleur/formulaire_connexion_Accueil.php" onsubmit="return Afficher_erreur_connexion()" method="post">
         <label for="Nom d'utilisateur"> Nom d'utilisateur:</label><input type="text" name="username" /><br/>
         <label for="Mot de passe"> Mot de passe:</label><input type="password" name="password" /><br/>
         <label for="valider"></label><input type="submit" name="valider" />
         <p> pas encore de compte?<a href="../Vue/inscription.html"> inscrivez vous!</a></p>
 
     </form>
+    <script type="text/javascript" src="../JS/Erreur_connexion.js"></script>
 </section>
 
 </body>
 </html>
 
-<?php

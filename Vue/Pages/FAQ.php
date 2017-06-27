@@ -56,7 +56,8 @@
     <div id="Reponse_5" style="display:none">
         Pour modifier vos informations, cliquez sur l'onglet "Mon Compte" puis remplissez à nouveau les champs.
     </div>
-    <br/><br/>
+
+    <p> Contactez nous par mail à l'adresse DomIsep@gmail.com ou par téléphone au 01 23 45 67 89</p>
 
 
 

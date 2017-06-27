@@ -13,7 +13,7 @@
 <h2>Créez votre compte HomEyeGod</h2>
 <section class="section_inscription">
     <div><!-- on rentre les informations dans des cases -->
-        <form id="form_inscription" action="../../Controleur/Formulaire_inscription.php" onsubmit="return Afficher_erreur()" method="POST">
+        <form id="form_inscription" action="../../Controleur/Formulaire_inscription.php" onsubmit="return Afficher_erreur_inscription()" method="POST">
             <label for="Nom">Nom:</label><input type="text" name="nom"/><br/>
             <label for="Prénom"> Prénom:</label><input type="text" name="prenom"/><br/>
             <label for="Sexe"> Sexe:</label><input type="radio" name="sexe" value="homme"/>homme
@@ -58,4 +58,3 @@
 </body>
 </html>
 
-<?php
