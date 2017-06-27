@@ -7,7 +7,7 @@
         <header>
 
             <h1><a href="home_page.html"><img src="../" height="15%" width="15%" alt="logo HomEyeGod" /></a></h1>
-            <div>
+            <div id="bouton_bandeau">
             <?php if ($_SESSION['Roles']==2 || $_SESSION['Roles']==3) { ?>
     <input href="page_admin.php" type=<?="button"?> value=Admin> </input>
 

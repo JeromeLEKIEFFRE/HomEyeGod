@@ -236,3 +236,8 @@ aside
 .boutton_deco{
 	text-align: right;
 }
+#bouton_bandeau
+{
+	display: flex;
+	align-content: flex-end;
+}
