@@ -10,7 +10,7 @@
 <header>
 
 </header>
-<h2>Créez votre compte HomEyeGod</h2>
+<h2>Créez votre compte HomiCare</h2>
 <section class="section_inscription">
     <div><!-- on rentre les informations dans des cases -->
         <form id="form_inscription" action="../../Controleur/Formulaire_inscription.php" onsubmit="return Afficher_erreur_inscription()" method="POST">

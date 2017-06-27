@@ -32,6 +32,7 @@ catch (Exception $e)
     die('Erreur : ' . $e->getMessage());
 }
 ?>
+</div>
 <body>
 <section>
     <form action="../../Controleur/formulaire_connexion_Accueil.php" method="post">
