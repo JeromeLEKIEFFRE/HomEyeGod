@@ -1,32 +1,50 @@
-*
 {
     font-family: "Arial";
 }
+
 body{
-    padding: auto;
-    margin: auto;
+    margin:auto;
+    padding:auto;
 }
+
 header
 {
     color: #4c74a1;
     margin-left: 20px;
     height: 20%;
 }
-nav
-{
-    background-color: #4c74a1;
-    bottom: auto;
-    margin-left: auto;
-}
+
 p, h1
 {
     color: #4c74a1;
 }
-h2
+
+nav
 {
+    background-color: #4c74a1;
+    margin-left: auto;
+}
+
+nav ul
+{
+    display: table;
+    width: auto;
+    margin: 10px auto;
+    padding: auto;
+}
+
+nav ul li
+{
+    display: table-cell;
+}
+
+nav ul li a
+{
+    display: block;
     text-align: center;
-    color: #4c74a1;
-    font-size: 2em;
+    text-decoration: none;
+    padding: 1em 2em 1em 2em;
+    color: white;
 }
 
 
@@ -37,32 +55,34 @@ ul
     margin: 10px auto;
     padding: auto;
 }
+
 ul li
 {
     display: table-cell;
 }
-.navigation a
+
+ul li a
 {
-
-    text-decoration: none;
-}
-ul li a{
-
-    color: white;
     display: block;
     text-align: center;
     text-decoration: none;
-    padding: 1em 8em 1em 10em;
+    padding: 1em 2em 1em 2em;
 }
 
-
-
-.image
+/*Navigation*/
+.navigation a
 {
-
-    width: auto;
-    height: 20em;
+    color: white;
+    text-decoration: none;
 }
+
+h2
+{
+    text-align: center;
+    color: #4c74a1;
+    font-size: 2em;
+}
+
 h3{
     text-align: center;
     font-size:  30px;
@@ -78,14 +98,14 @@ button
     font-size:  17px;
     border: none;
     display: block;
-    margin-left: 34.8%;
+    margin-left: 36.8%;
     text-align: left;
 }
 
 #Reponse, #Reponse_2, #Reponse_3, #Reponse_4, #Reponse_5
 {
     font-family: Calibri;
-    margin-left: 37.7%;
+    margin-left: 37.1%;
     margin-right: 25%;
 }
 
