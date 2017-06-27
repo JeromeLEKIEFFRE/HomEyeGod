@@ -17,7 +17,7 @@ $_SESSION['Roles']="";
     <p><img src="../Images/logo_HEG.png" alt="logo HomiCare" /></p>
 </div>
 <div class="titre_page">
-    <h1>Félicitation!</h1>
+    <h1>Félicitations!</h1>
 
     <?php
     $dbname = 'homeyegod';

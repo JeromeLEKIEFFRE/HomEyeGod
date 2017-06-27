@@ -107,21 +107,17 @@ if ($_POST["valider"] //vérification des champs
 
     newHome($db,$ville,$type_voie,$numero_voie,$voie,$pays,$code_postal,$superficie,$nombrepiece,$nombrepersonne);
 
-    echo (verifyHome($db)['Voie']);
 
     $idMaison=idNewMaison($db);
 
     insertNewUser($db,$username,$mdp,$nom,$prenom,$idMaison,$numero_tel,$numero_tel_fixe,$email,$type_user);
 
     $idUtilisateur= verify($db)['idUtilisateur'];
-echo $idUtilisateur;
-echo $idMaison;
     updateUserId($db,$idUtilisateur,$idMaison);
 
-    echo (verify($db)['idUtilisateur']);
 
 
-    //header('Location: ../Pages/compte_cree.html');
+    header('Location: ../Vue/Pages/compte_cree.php');
     exit;
 }
 
