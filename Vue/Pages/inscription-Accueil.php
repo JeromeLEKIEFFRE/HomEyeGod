@@ -55,6 +55,8 @@
             <label for="Numéro de téléphone"> Numéro de téléphone:</label><input type="tel" name="numero_tel"/><br/>
             <label for="Numéro de téléphone fixe"> Numéro de téléphone fixe:</label><input type="tel" name="numero_tel_fixe"/><br/>
 
+            <p>En cliquant sur "Envoyer", vous acceptez nos <a href="cgu.html"> conditions générales d'utilisation " </a> </p> <br/>
+
             <label for="valider"></label><input type="submit" name="valider" id="boutton_submit"/>
 
         </form>
