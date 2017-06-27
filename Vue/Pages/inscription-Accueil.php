@@ -50,6 +50,7 @@
             <label for="Voie">Voie:</label><input type="text" name="voie"/><br/>
             <label for="Code postal"> Code postal:</label><input type="int" name="code_postal"/><br/>
             <label for="Ville"> Ville:</label><input type="text" name="ville"/><br/>
+            <label for="Pays"> Pays:</label><input type="text" name="pays"/><br/>
             <label for="email"> email:</label><input type="email" name="email"/><br/>
             <label for="Numéro de téléphone"> Numéro de téléphone:</label><input type="tel" name="numero_tel"/><br/>
             <label for="Numéro de téléphone fixe"> Numéro de téléphone fixe:</label><input type="tel" name="numero_tel_fixe"/><br/>

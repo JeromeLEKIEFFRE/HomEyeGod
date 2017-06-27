@@ -56,5 +56,14 @@ function verify($db)
     $repf=$rep->fetch();
     return $repf;
 }
+function typevoie($db,$type_voie)
+{
+    $sql='SELECT TypeValue FROM typevoie WHERE TypeName="'.$type_voie.'"';
+    $rep = $db->query($sql);
+    $repf=$rep->fetch();
+    return $repf;
+    $sql=$db->query('SELECT TypeValue FROM typevoie WHERE TypeName = "'.$type_voie.'"');
+    return $sql['TypeValue'];
+}
 
 ?>

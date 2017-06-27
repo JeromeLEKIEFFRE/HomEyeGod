@@ -1,11 +1,9 @@
 <?php
-
 // Contrôleur pour le formulaire inscription
 include("../Modele/Verification_Accueil.php");
-include ("../Modele/connexion_db.php");
+include ("../Modele/connexion_db_1.php");
 include("../Modele/Insertion_BDD_Accueil.php");
 
-//email="test@exemple.com";
 //affectation des données du formulaires en variables php
 if ($_POST != NULL)
 $nom = $_POST["nom"];
@@ -46,9 +44,13 @@ else
 
 if ($_POST["ville"]!=NULL)
 $ville=          $_POST["ville"];
-
 else
     echo"erreur ville";
+
+if ($_POST["pays"]!=NULL)
+    $pays=          $_POST["pays"];
+else
+    $pays="France";
 
 if  ($_POST["email"]!=NULL)
 $email=          $_POST["email"];
@@ -67,15 +69,26 @@ else
 
 
 if ($_POST["type_voie"] !=NULL)
-$type_voie=$_POST["type_voie"];
+$type_voie_nom=$_POST["type_voie"];
+else
+    echo "erreur type voie";
+$type_voie = typevoie($db,$type_voie_nom)['TypeValue'];
 
 if ($_POST["voie"] !=NULL)
 $voie=$_POST["voie"];
+else
+    echo "erreur voie";
 
 if ($_POST["numero_voie"] !=NULL)
 $numero_voie=$_POST["numero_voie"];
+else
+    echo "erreur numéro voie";
 
 $idMaison=1;
+$type_user=1;
+$superficie=1;
+$nombrepiece=1;
+$nombrepersonne=1;
 
 if ($_POST["valider"] //vérification des champs
     AND $nom !=NULL
@@ -91,11 +104,15 @@ if ($_POST["valider"] //vérification des champs
     AND filter_var($email, FILTER_VALIDATE_EMAIL) //email valide?
     AND idMail($db, $email)->rowcount()==NULL //vérification présence du mail dans bdd
     AND $_POST["numero_tel"]!=NULL ){
-    insertNewUser($db,$username,$mdp,$nom,$prenom,$idMaison,$numero_tel,$numero_tel_fixe,$email);
+
+    insertNewUser($db,$username,$mdp,$nom,$prenom,$idMaison,$numero_tel,$numero_tel_fixe,$email,$type_user);
+
     echo (verify($db)['Nom']);
-    //newIdUtilisateur($db);
-    //newHome($db, idUtilisateur($db,$_POST["Nom_utilisateur"]),$_POST["Ville"], NULL, $_POST["Numero_de_telephone"], NULL, NULL, $_POST["Code_Postal"]);
-    //insertNewUser($db, $_POST["Nom_utilisateur"], $_POST["Mot_de_passe"], NULL, NULL, NULL, $_POST["Numero_de_telephone"], NULL);
+
+    $idUtilisateur=idUtilisateur($db,$username);
+
+    newHome($db,$idUtilisateur,$ville,$type_voie,$numero_voie,$voie,$pays,$code_postal,$superficie,$nombrepiece,$nombrepersonne);
+
     //header('Location: ../Pages/compte_cree.html');
     exit;
 }

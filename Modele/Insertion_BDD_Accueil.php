@@ -4,9 +4,10 @@ require("connexion_db_1.php");
 $requ->execute();*/
 
 
-function insertNewUser($db,$username,$mdp,$nom,$prenom,$idMaison,$numero_tel,$numero_tel_fixe,$email){
+
+function insertNewUser($db, $username, $mdp, $nom, $prenom, $idMaison, $numero_tel, $numero_tel_fixe, $email, $type_user){
     // Créer un nouvel utilisateur /!\ à faire après avoir crée la maison avec les input de la demande d'adresse qui sera celui de la maison 'principale'
-    $sql ='INSERT INTO Utilisateur ()VALUES (1,"'.$nom.'","'.$prenom.'","'.$idMaison.'","'.$numero_tel_fixe.'","'.$numero_tel.'","'.$email.'","'.$username.'","'.$mdp.'")';
+    $sql ='INSERT INTO utilisateurs () VALUES (NULL, "'.$type_user.'","'.$nom.'","'.$prenom.'","'.$idMaison.'","'.$numero_tel_fixe.'","'.$numero_tel.'","'.$email.'","'.$username.'","'.$mdp.'")';
     $db->exec($sql);
 }
 
@@ -17,9 +18,9 @@ function newIdUtilisateur($db){
     return $reponse+1;
 }
 
-function newHome($db,$idUtilisateur,$ville,$typevoie,$num,$nomvoie,$pays,$codepostal){
-    // Création d'une maison  et retourne l'idMaison correspondant  HOME SWEET HOME
-    $sql ='INSERT INTO adresse VALUES ("'.$idUtilisateur.'","'.$ville.'","'.$typevoie.'","'.$num.'","'.$nomvoie.'","'.$pays.'","'.$codepostal.'")';
+function newHome($db,$idUtilisateur,$ville,$type_voie,$numero_voie,$voie,$pays,$codepostal,$superficie,$nombrepiece,$nombrepersonne){
+    // Création d'une maison  et retourne l'idMaison correspondant
+    $sql ='INSERT INTO maisons VALUES (NULL,"'.$idUtilisateur.'","'.$type_voie.'","'.$numero_voie.'","'.$voie.'","'.$codepostal.'","'.$ville.'","'.$pays.'","'.$superficie.'","'.$nombrepiece.'","'.$nombrepersonne.'")';
     $db->exec($sql);
 
 }
