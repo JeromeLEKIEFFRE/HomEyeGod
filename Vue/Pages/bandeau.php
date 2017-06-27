@@ -12,7 +12,7 @@
     <input href="page_admin.php" type=<?="button"?> value=Admin> </input>
 
 <?php }?>
-<script> show_admin_button("<?php $_SESSION["Roles"] ?>");</script>
+<script type="text/javascript" src="../JS/admin_bouton.js"> show_admin_button("<?php $_SESSION["Roles"] ?>");</script>
 <a href="../../Controleur/deconexion.php"><input  type="button" value="deconexion" id="boutton_deco"/>
     </div>
     </header>
@@ -23,3 +23,4 @@
             <li><a href="aide.html">Aide</a></li>
         </ul>
     </nav>
+
