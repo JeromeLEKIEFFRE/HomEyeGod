@@ -11,19 +11,22 @@ function recup_all_broken_capt($db){
           WHERE capteurs.Etat = 3' ;
     $option="";
     $r = $db->query($sql);
-    foreach ($r as $row)
+    $rf=$r->fetchAll();
+    foreach ($rf as $row)
         $option.="<li>". $row["NomUtilisateur"].",capteur en panne de type ".$row["TypeName"].", dans la pièce ".$row["Nom_piece"].", contact:".$row['Mail']. "</li>";
     return $option;
 }
 function recup_name($db){
-    $return = $db -> query('SELECT * FROM utilisateurs JOIN roles ON utilisateurs.Roles = roles.RoleValue ORDER BY NomUtilisateur ASC ');
+    $return = $db -> query('SELECT NomUtilisateur,RoleName FROM utilisateurs JOIN roles ON utilisateurs.Roles = roles.RoleValue ORDER BY NomUtilisateur ASC ');
     $option = "<div class='nom_user'> <p>Nom d'utilisateur</p>" ;
     $option2 = "<div class='role_user'> <p>Rôle</p> " ;
-
-    foreach ($return as $row) {
+    $rf=$return->fetchAll();
+    foreach ($rf as $row) {
         $option .= "<p id= ".$row['NomUtilisateur']." onclick='fill_div_info(".$row['NomUtilisateur'].")'>".$row['NomUtilisateur'] ."</p><br/>";
         $option2 .= "<p>".$row['RoleName']."</p><br/>";
+
     }
+
     $option.="</div>";
     $option2.="</div>";
     return array($option,$option2);
@@ -77,7 +80,8 @@ function recup_user_info($db,$id){
     $r = $db->query('SELECT * FROM utilisateurs  JOIN maisons ON maisons.idUtilisateur = utilisateurs.idUtilisateur JOIN typevoie ON maisons.TypeVoie = typecapteur.TypeValue WHERE utilisateurs.NomUtilisateur ="'.$id.'"');
     $option="<div class='user_content'> Informations";
     $option2="<div class='house_content'> Maison(s)";
-    foreach ($r as $row){
+    $rf=$r->fetchAll();
+    foreach ($rf as $row){
         echo $row['NomUtilisateur'];
         $option.= "Nom d'utilisateur : ".$row['NomUtilisateur']."</br>"."Nom : ".$row['Nom']."</br>"."Prénom : ".$row['Prenom']."</br>"."Adresse E-Mail : ".$row['Mail']."</br>"."Numéro de téléphone".$row['Numero']."</br>";
         $option2.= "Adresse : ".$row['numero_voie']." ".$row['TypeName']." ".$row['Voie'].", ".$row['code_postal'].", ".$row['Ville'];
