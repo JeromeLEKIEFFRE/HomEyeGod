@@ -16,26 +16,26 @@
 <h1>CONDITIONS GÉNÉRALES D’UTILISATION DE HOMEYECARE</h1>
 
 <br/><br/>
-<p>L’utilisateur de la plateforme HomEyeCare est invité à prendre connaissance des conditions générales d’utilisation avant de finaliser la création de son compte et de connecter son domicile.</p>
+<p>L’utilisateur de la plateforme HomiCare est invité à prendre connaissance des conditions générales d’utilisation avant de finaliser la création de son compte et de connecter son domicile.</p>
 <br/>
 <h2>ARTICLE 1 : CHAMP D’APPLICATION</h2>
 <br/>
-<p>Les présentes Conditions générales d’utilisation s’appliquent, sans restriction ni réserve à toute souscription et utilisation de services liés à l’offre HomEyeCare proposés par DOMISEP aux consommateurs et non-professionnels sur le site Internet d’HomEyeCare. Le non-professionnel étant toute personne morale qui agit à des fins qui n'entrent pas dans le cadre de son activité commerciale, industrielle, artisanale, libérale ou agricole.</p>
+<p>Les présentes Conditions générales d’utilisation s’appliquent, sans restriction ni réserve à toute souscription et utilisation de services liés à l’offre HomiCare proposés par DOMISEP aux consommateurs et non-professionnels sur le site Internet d’HomiCare. Le non-professionnel étant toute personne morale qui agit à des fins qui n'entrent pas dans le cadre de son activité commerciale, industrielle, artisanale, libérale ou agricole.</p>
 <br/>
 <h2>ARTICLE 2 : OBJET</h2>
 <br/>
-<p>Les présentes Conditions générales de vente et d’utilisation ont pour objet de définir et de régir les conditions d’accès et d’usage du Service. L’usage du Service est subordonné au respect par le Client des présentes Conditions générales, dont il reconnaît expressément en avoir eu connaissance avant toute souscription à HomEyeCare, et dont il reconnaît en accepter les termes.</p>
+<p>Les présentes Conditions générales de vente et d’utilisation ont pour objet de définir et de régir les conditions d’accès et d’usage du Service. L’usage du Service est subordonné au respect par le Client des présentes Conditions générales, dont il reconnaît expressément en avoir eu connaissance avant toute souscription à HomiCare, et dont il reconnaît en accepter les termes.</p>
 <br/>
 <h2>ARTICLE 3 : DESCRIPTION DU SERVICE</h2>
 <br/>
-<p>Le service HomEyeCare permet après souscription, d’équiper son domicile en capteurs et caméras connectés puis de piloter son domicile depuis la plateforme en ligne. Le client peut s’être préalablement équipé de tout matériel de domotique connecté, pris ensuite en charge par le service HomEyeCare.
+<p>Le service HomiCare permet après souscription, d’équiper son domicile en capteurs et caméras connectés puis de piloter son domicile depuis la plateforme en ligne. Le client peut s’être préalablement équipé de tout matériel de domotique connecté, pris ensuite en charge par le service HomiCare.
     Le Client s’engage à utiliser le Service, notamment le contenu numérique auquel il donne accès, de manière responsable et non-frauduleuse.
-    Le client qui souscrit au service HomEyeCare devra s’assurer préalablement qu’il possède les prérequis suivants :
+    Le client qui souscrit au service HomiCare devra s’assurer préalablement qu’il possède les prérequis suivants :
     Un domicile en France métropolitaine
     Un accès internet haut débit
     Un routeur disposant d’une connexion ethernet et/ou Wifi
-    Le Service HomEyeCare est accessible 24/24 heures et 7/7 jours dans la limite des conditions d’accès et d’usage. Toutefois, le Prestataire peut être amené à optimiser les modalités d’accès au Service HomEyeCare et son usage dans l’intérêt même du Client et des Utilisateurs. Le Prestataire s’engage à ce qu’il n’en résulte ni augmentation des prix, ni altération de qualité, ni modification substantielle des fonctionnalités. À ce titre, le Client accepte toute évolution technique et/ou technologique apportée au Service. Cette évolution ne saurait être considérée, par le Client, comme un motif légitime de résiliation du Contrat. Le Prestataire se réserve le droit de suspendre ou limiter l'accès au Service HomEyeCare en cas d'interventions techniques ou d'opérations de maintenance ainsi qu’en cas de risque pour la sécurité du Service ou d’utilisation frauduleuse de celui-ci afin de protéger les intérêts du Client. Le Prestataire peut alors procéder de plein droit et sans préavis à la suspension ou à la limitation d'accès au Service après en avoir avisé préalablement le Client, par tout moyen. La mise en œuvre de la suspension ou limitation d'accès au Service relève le Prestataire de son obligation de fournir le Service souscrit pour toute la durée de cette suspension ou limitation et ne donne droit à aucune indemnité au bénéfice du Client. La responsabilité du Prestataire ne saurait être engagée à raison des éventuelles conséquences dommageables de la suspension ou limitation d'accès au Service sur les activités du Client.</p>
-<p>Les fonctionnalités du service accessibles au client sur la plateforme en ligne HomEyeCare sont les suivantes :</p>
+    Le Service HomiCare est accessible 24/24 heures et 7/7 jours dans la limite des conditions d’accès et d’usage. Toutefois, le Prestataire peut être amené à optimiser les modalités d’accès au Service HomiCare et son usage dans l’intérêt même du Client et des Utilisateurs. Le Prestataire s’engage à ce qu’il n’en résulte ni augmentation des prix, ni altération de qualité, ni modification substantielle des fonctionnalités. À ce titre, le Client accepte toute évolution technique et/ou technologique apportée au Service. Cette évolution ne saurait être considérée, par le Client, comme un motif légitime de résiliation du Contrat. Le Prestataire se réserve le droit de suspendre ou limiter l'accès au Service HomiCare en cas d'interventions techniques ou d'opérations de maintenance ainsi qu’en cas de risque pour la sécurité du Service ou d’utilisation frauduleuse de celui-ci afin de protéger les intérêts du Client. Le Prestataire peut alors procéder de plein droit et sans préavis à la suspension ou à la limitation d'accès au Service après en avoir avisé préalablement le Client, par tout moyen. La mise en œuvre de la suspension ou limitation d'accès au Service relève le Prestataire de son obligation de fournir le Service souscrit pour toute la durée de cette suspension ou limitation et ne donne droit à aucune indemnité au bénéfice du Client. La responsabilité du Prestataire ne saurait être engagée à raison des éventuelles conséquences dommageables de la suspension ou limitation d'accès au Service sur les activités du Client.</p>
+<p>Les fonctionnalités du service accessibles au client sur la plateforme en ligne HomiCare sont les suivantes :</p>
 <ul><li>Possibilité de prise de rendez-vous pour installer du matériel</li>
     <li>Accès en continu aux informations de tous les capteurs et caméras équipés</li>
     <li>Ajout ou suppression de nouvel appareil ou équipement</li>
@@ -50,7 +50,7 @@
 <br/>
 <h2>ARTICLE 5 : RÉTRACTATION ET RÉSILIATION</h2>
 <br/>
-<p>Le Client dispose, conformément à la loi d’un délai de rétractation de 14 jours à compter de la conclusion du Contrat pour exercer son droit de rétractation auprès du Prestataire et annuler sa souscription, sans avoir à justifier de motifs ni à payer de pénalité, à fin de remboursement, sauf si l’exécution des prestations a commencé, avec l’accord du Client, avant la fin du délai de rétractation. Le Client peut également exercer son droit de rétractation à l’aide de toute autre déclaration, dénuée d’ambiguïté, exprimant sa volonté de se rétracter, et notamment par courrier postal adressé au Service Support Client dont les coordonnées sont disponibles sur la plateforme HomEyeCare. Le remboursement des sommes réglées par le Client sera effectué dans un délai de 14 jours à compter de la réception, par le Prestataire, de la notification de la rétractation du Client.</p>
+<p>Le Client dispose, conformément à la loi d’un délai de rétractation de 14 jours à compter de la conclusion du Contrat pour exercer son droit de rétractation auprès du Prestataire et annuler sa souscription, sans avoir à justifier de motifs ni à payer de pénalité, à fin de remboursement, sauf si l’exécution des prestations a commencé, avec l’accord du Client, avant la fin du délai de rétractation. Le Client peut également exercer son droit de rétractation à l’aide de toute autre déclaration, dénuée d’ambiguïté, exprimant sa volonté de se rétracter, et notamment par courrier postal adressé au Service Support Client dont les coordonnées sont disponibles sur la plateforme HomiCare. Le remboursement des sommes réglées par le Client sera effectué dans un délai de 14 jours à compter de la réception, par le Prestataire, de la notification de la rétractation du Client.</p>
 
 <br/>
 <p>Le Client peut obtenir la résiliation de son engagement avant l’expiration du Contrat en cas de survenance de l’un des évènements imprévus suivants :<p>
@@ -59,7 +59,7 @@
     <li>Le décès du Client. Les héritiers ou ayants droits du Client doivent pouvoir justifier de leur intérêt à agir par la production de tout document pertinent (copie de l’acte de décès par exemple).</li>
     <li>Le cas de force majeure. Le Client doit également pouvoir en justifier par la production d’un document pertinent. En cas de doute sur le justificatif présenté, le Prestataire pourra demander tout justificatif supplémentaire lui semblant utile avant de donner suite à la demande de résiliation anticipée
         En cas de doute sur le justificatif présenté, le Prestataire pourra demander tout justificatif supplémentaire lui semblant utile avant de donner suite à la demande de résiliation anticipée.
-        La résiliation anticipée peut être demandée à l’aide de toute déclaration écrite, dénuée d’ambiguïté, exprimant la volonté du Client de résilier son engagement, et notamment par un courrier postal adressé à l’adresse indiquée sur la plateforme HomEyeCare.</li></ul>
+        La résiliation anticipée peut être demandée à l’aide de toute déclaration écrite, dénuée d’ambiguïté, exprimant la volonté du Client de résilier son engagement, et notamment par un courrier postal adressé à l’adresse indiquée sur la plateforme HomiCare.</li></ul>
 <br/>
 <h2>ARTICLE 6 – RESPONSABILITÉ DU PRESTATAIRE – GARANTIE LÉGALE</h2>
 <br/>
@@ -89,7 +89,7 @@
     <li>les informations relatives au droit de rétractation (existence, conditions, délai, modalités d’exercice et formulaire type de rétractation), aux modalités de résiliation et autres conditions contractuelles importantes</li>
     <li>les informations relatives à la législation applicable et à la juridiction compétente en cas de litige</li>
     <li>les informations relatives à l’identité du Prestataire, à ses coordonnées postales, téléphoniques et électroniques et à ses activités, si elles ne ressortent pas du contexte.</li>
-    <p>Le fait pour un consommateur ou un non-professionnel, de souscrire via la plateforme HomEyeCare implique l’adhésion et acceptation pleine et entière des présentes Conditions générales et obligation au paiement du Service souscrit, ce qui est expressément reconnu par le Client, qui renonce, notamment, à se prévaloir de tout document contradictoire, qui serait inopposable au Prestataire.</p>
+    <p>Le fait pour un consommateur ou un non-professionnel, de souscrire via la plateforme HomiCare implique l’adhésion et acceptation pleine et entière des présentes Conditions générales et obligation au paiement du Service souscrit, ce qui est expressément reconnu par le Client, qui renonce, notamment, à se prévaloir de tout document contradictoire, qui serait inopposable au Prestataire.</p>
 </body>
 
 </html>
