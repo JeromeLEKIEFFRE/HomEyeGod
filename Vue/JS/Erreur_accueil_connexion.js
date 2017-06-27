@@ -1,6 +1,6 @@
 function Afficher_erreur_connexion(){
-    var a = document.forms["form_connexion"]["username"].value;
-    var b = document.forms["form_connexion"]["password"].value;
+    var a = document.forms["form_connexion"]["Nom_utilisateur"].value;
+    var b = document.forms["form_connexion"]["Mot_de_passe"].value;
     var erreur_username="";
     var erreur_password="";
 
