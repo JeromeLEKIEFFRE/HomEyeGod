@@ -7,20 +7,9 @@
 </head>
 
 <body>
-<header>
-    <h1><a href="home_page.html"><img src="../Images/logo_HEG.png" alt="logo GerHome" /></a></h1>
-</header>
-
-<nav>
-    <ul id="navigation">
-        <li><a href="home_page.html" alt="logo Home">Accueil <!--<img src="logo_accueil.png" alt="retour vers l'accueil"/></a></li>-->   <!-- ici mettre le logo accueil -->
-        <li><a href="mon_compte.html">Mon Compte</a></li>
-        <li><a href="ma_maison.html">Ma maison</a></li>
-        <li><a href="boutique.html">Boutique</a></li>
-        <li><a href="qui_sommes_nous.html">Qui sommes nous?</a></li>
-        <li><a href="aide_contact.html">Aide/Contact</a></li>
-    </ul>
-</nav>
+    <?php
+    include "bandeau.php";
+    ?>
 <h2>Créez votre compte HomEyeGod</h2>
 <section class="section_inscription">
     <div><!-- on rentre les informations dans des cases -->
