@@ -86,15 +86,15 @@ ul li a
 }
 
 .showpiece,
-.showgeneral,
+.showcenter,
 .showcapt
 {
-    border-top: solid white 10px;
+    border-top: solid white 3px;
 
 }
 
 .showpiece p,
-.showgeneral p,
+.showcenter p,
 .showcapt p
 {
     text-align: center;
@@ -110,21 +110,17 @@ ul li a
 }
 
 /*SHOWPIECE*/
-#listepiece{
-    display: none;
+.listepiece{
+    display: table;
+    text-decoration: none;
 }
-#listepiece li{
+.listepiece li{
     display: list-item;
-    position: relative;
     text-decoration: none;
     margin-bottom: 25%;
     color: White;
-    z-index:1;
 }
-#listepiece .actif{
-    z-index: 10;
-    font-weight: bold;
-}
+
 
 /*AJOUTPIECE*/
 .ajout_piece p {
@@ -161,23 +157,36 @@ ul li a
 
 
 /*SHOWGENERAL*/
-.showgeneral
+.showcenter
 {
     background-color: #7192bb;
     width : 60%;
     margin-bottom:auto;
 }
 
-.showgeneral h3
+.showcenter h3
 {
     margin-left: 5%;
 }
+#showdatas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
-#showdatas ul
-{
-    clear: both;
-    position: relative;
-    z-index: 5;
-    flex-wrap:wrap;
+}
+.doncapt{
+    display: flex;
+    flex-wrap : wrap;
+    color: #406694;
+}
+.doncapt h3{
+    margin-left: 15px;
+
+}
+.doncapt h4{
+    margin-left: 15px;
 }
 
+.doncapt h5{
+    margin-left: 15px;
+}

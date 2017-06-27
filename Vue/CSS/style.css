@@ -8,6 +8,8 @@ header
 	color: #4c74a1;
 	margin-left: 20px;
 	height: 20%;
+	margin-top: 50px;
+
 }
 nav
 {
@@ -43,7 +45,6 @@ ul
 	display: table;
 	width: auto;
 	margin: 10px auto;
-	padding: auto;
 }
 ul li
 {
@@ -58,7 +59,7 @@ ul li a{
     display: block;
     text-align: center; 
     text-decoration: none;
-    padding: 1em 2em 1em 2em;
+	padding: 0em 2em 1em 2em;
 }
 
 .button

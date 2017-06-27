@@ -1,22 +1,16 @@
-$(function() {
-    $('#listepiece').css('display', 'list-istem');
-    $('#listepiece').click(function(event) {
-        var actuel = event.target;
-        if (!/li/i.test(actuel.nodeName) || actuel.className.indexOf('actif') > -1) {
-            return;
-        }
-        $(actuel).addClass('actif').siblings().removeClass('actif');
-        setDisplay();
-    });
-    function setDisplay() {
-        var modeAffichage;
-        $('#listepiece li').each(function(rang) {
-            modeAffichage = $(this).hasClass('actif') ? '' : 'none';
-            $('.doncapt').eq(rang).css('display', modeAffichage);
-        });
+$(document).ready(
+    function(){
+        $('ul.listepiece li').click(function(){
+            var tab_id = $(this).attr('data-tab');
+
+            $('ul.listepiece li').removeClass('current');
+            $('.tab-content').removeClass('current');
+
+            $(this).addClass('current');
+            $("#"+tab_id).addClass('current');
+        })
     }
-    setDisplay();
-});
+)
 
 
 
