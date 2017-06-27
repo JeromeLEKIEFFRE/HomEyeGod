@@ -86,10 +86,9 @@ function fill_div_info(str) {
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             document.getElementById("show_info").innerHTML = xmlhttp.responseText;
-            document.getElementById("var_user").value = str;
         }
     }
-    xmlhttp.open("GET", "../../Controleur/fill_text.php?text=" + str, true);
+    xmlhttp.open("GET", "../../Controleur/fill_info_user.php?text=" + str, true);
     xmlhttp.send();
 }
 

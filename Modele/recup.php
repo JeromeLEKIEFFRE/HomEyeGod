@@ -21,8 +21,8 @@ function recup_name($db){
     $option2 = "<div class='role_user'> <p>Rôle</p> " ;
 
     foreach ($return as $row) {
-        $option .= $row['NomUtilisateur'] . "<br/>";
-        $option2 .= $row['RoleName'] . "<br/>";
+        $option .= "<p id= ".$row['NomUtilisateur']." onclick='fill_div_info(".$row['NomUtilisateur'].")'>".$row['NomUtilisateur'] ."</p><br/>";
+        $option2 .= "<p>".$row['RoleName']."</p><br/>";
     }
     $option.="</div>";
     $option2.="</div>";
@@ -74,12 +74,13 @@ function recup_text($db,$selected_text){
 }
 
 function recup_user_info($db,$id){
-    $r = $db->query('SELECT * FROM utilisateurs  JOIN maisons ON maisons.idUtilisateur = utilisateurs.idUtilisateur JOIN typevoie ON maisons.TypeVoie = typecapteur.TypeValue WHERE utilisateurs.idUtilisateur ="'.$id.'"');
+    $r = $db->query('SELECT * FROM utilisateurs  JOIN maisons ON maisons.idUtilisateur = utilisateurs.idUtilisateur JOIN typevoie ON maisons.TypeVoie = typecapteur.TypeValue WHERE utilisateurs.NomUtilisateur ="'.$id.'"');
     $option="<div class='user_content'> Informations";
     $option2="<div class='house_content'> Maison(s)";
     foreach ($r as $row){
+        echo $row['NomUtilisateur'];
         $option.= "Nom d'utilisateur : ".$row['NomUtilisateur']."</br>"."Nom : ".$row['Nom']."</br>"."Prénom : ".$row['Prenom']."</br>"."Adresse E-Mail : ".$row['Mail']."</br>"."Numéro de téléphone".$row['Numero']."</br>";
-        $option2 .= "Adresse : ".$row['numero_voie']." ".$row['TypeName']." ".$row['Voie'].", ".$row['code_postal'].", ".$row['Ville'];
+        $option2.= "Adresse : ".$row['numero_voie']." ".$row['TypeName']." ".$row['Voie'].", ".$row['code_postal'].", ".$row['Ville'];
     }
     $option.="</div>";
     $option2.="</div>";
